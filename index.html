@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Research Specialist — 15-Brand Comparator</title>
+    <meta name="description"
+        content="Find and compare 15 manufacturers for any product. Auto-calculates Cost per 100g for a like-to-like comparison. Powered by SerpAPI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+</head>
+
+<body>
+
+    <!-- API KEY MODAL -->
+    <div class="modal-overlay" id="apiKeyModal">
+        <div class="modal-card">
+            <div class="modal-icon">🔑</div>
+            <h2 class="modal-title">SerpAPI Key Required</h2>
+            <p class="modal-desc">
+                This tool uses <strong>SerpAPI</strong> to search Google Shopping for live product data.
+                Get a free key (100 searches/month) at <a href="https://serpapi.com" target="_blank">serpapi.com</a>.
+            </p>
+            <input type="text" id="apiKeyInput" class="modal-input" placeholder="Paste your SerpAPI key here..."
+                autocomplete="off" spellcheck="false" />
+            <div class="modal-error" id="modalError"></div>
+            <button class="modal-btn" id="saveApiKeyBtn" onclick="saveApiKey()">
+                Save & Continue →
+            </button>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-brand">
+                <div class="header-icon-wrap">🔬</div>
+                <div>
+                    <div class="header-title">Consumer Research Specialist</div>
+                    <div class="header-subtitle">15-Brand Comparator · Cost per 100g Analysis</div>
+                </div>
+            </div>
+            <button class="key-btn" id="changeKeyBtn" onclick="promptApiKey()" title="Change API Key">
+                🔑 API Key
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SEARCH -->
+    <section class="hero">
+        <div class="hero-glow glow-1"></div>
+        <div class="hero-glow glow-2"></div>
+        <div class="hero-content">
+            <div class="hero-badge">🧪 Meticulous Research · Real-time Data · 15 Unique Brands</div>
+            <h1 class="hero-heading">Find the Best Manufacturer<br><span class="hero-highlight">for Any Product</span>
+            </h1>
+            <p class="hero-desc">Type any product below. We'll find 15 unique brands from Amazon, calculate the cost per
+                100g, and tell you the best value, premium, and most popular picks.</p>
+
+            <form class="search-form" id="searchForm" onsubmit="handleSearch(event)">
+                <div class="search-wrap">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" class="search-input"
+                        placeholder='e.g. "Peanut Butter sweetened with Jaggery"' autocomplete="off"
+                        spellcheck="false" />
+                    <button type="submit" class="search-btn" id="searchBtn">
+                        <span class="search-btn-text">Analyze 15 Brands</span>
+                        <span class="search-btn-icon">→</span>
+                    </button>
+                </div>
+                <div class="search-suggestions">
+                    <span class="suggest-label">Try:</span>
+                    <span class="suggest-chip" onclick="fillSearch('Bilona Ghee')">Bilona Ghee</span>
+                    <span class="suggest-chip" onclick="fillSearch('Moringa Powder Organic')">Moringa Powder</span>
+                    <span class="suggest-chip" onclick="fillSearch('Cold Pressed Coconut Oil')">Cold Pressed Coconut
+                        Oil</span>
+                    <span class="suggest-chip" onclick="fillSearch('Rajgira Atta')">Rajgira Atta</span>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- RESULTS AREA -->
+    <main class="results-area" id="resultsArea" style="display:none;">
+
+        <!-- STATUS BAR -->
+        <div class="status-bar" id="statusBar">
+            <div class="status-inner">
+                <div class="status-left">
+                    <span class="status-dot" id="statusDot"></span>
+                    <span id="statusText">Searching...</span>
+                </div>
+                <div class="status-right" id="statusMeta"></div>
+            </div>
+        </div>
+
+        <!-- LOADING SKELETON -->
+        <div class="skeleton-wrap" id="skeletonWrap">
+            <div class="skeleton-card">
+                <div class="skeleton-row" style="width:60%"></div>
+                <div class="skeleton-row" style="width:90%"></div>
+                <div class="skeleton-row" style="width:75%"></div>
+                <div class="skeleton-row" style="width:85%"></div>
+                <div class="skeleton-row" style="width:65%"></div>
+                <div class="skeleton-row" style="width:80%"></div>
+                <div class="skeleton-row" style="width:70%"></div>
+            </div>
+        </div>
+
+        <!-- RESULTS CONTENT -->
+        <div class="results-content" id="resultsContent" style="display:none;">
+
+            <!-- PRODUCT HEADING -->
+            <div class="result-heading-wrap">
+                <div class="result-badge" id="resultBadge"></div>
+                <h2 class="result-heading" id="resultHeading"></h2>
+                <p class="result-subheading" id="resultSubheading"></p>
+            </div>
+
+            <!-- ANALYSIS CARDS -->
+            <div class="analysis-grid" id="analysisGrid"></div>
+
+            <!-- TABLE SECTION -->
+            <div class="table-section">
+                <div class="table-header">
+                    <h3 class="table-title">📊 Full Comparison Table</h3>
+                    <div class="table-meta" id="tableMeta"></div>
+                </div>
+                <div class="table-wrap">
+                    <table class="data-table" id="dataTable">
+                        <thead>
+                            <tr>
+                                <th class="th-rank">#</th>
+                                <th class="th-product">Product Title</th>
+                                <th class="th-brand">Brand</th>
+                                <th class="th-price">Price</th>
+                                <th class="th-cost">Cost / 100g</th>
+                                <th class="th-rating">⭐ Rating</th>
+                                <th class="th-reviews">Reviews</th>
+                                <th class="th-link">Link</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+                <div class="table-note">
+                    ⚠️ Prices and ratings are fetched live from Google Shopping (Amazon.in results). Cost per 100g
+                    requires parseable weight in the product title — marked as <span class="na-tag">N/A</span> where
+                    weight cannot be determined. Sorted cheapest per 100g first.
+                </div>
+            </div>
+
+            <!-- RE-SEARCH -->
+            <div class="re-search-wrap">
+                <button class="re-search-btn" onclick="scrollToSearch()">🔍 Search Another Product</button>
+            </div>
+        </div>
+
+        <!-- ERROR STATE -->
+        <div class="error-state" id="errorState" style="display:none;">
+            <div class="error-icon">⚠️</div>
+            <div class="error-title" id="errorTitle">Something went wrong</div>
+            <div class="error-msg" id="errorMsg"></div>
+            <button class="re-search-btn" onclick="resetUI()">Try Again</button>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Consumer Research Specialist · Data sourced via SerpAPI (Google Shopping · Amazon.in) · For research purposes
+            only.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
