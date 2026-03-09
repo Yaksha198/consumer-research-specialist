@@ -120,48 +120,33 @@ async function fetchProducts(query) {
 
 // ─── SERPAPI FETCH HELPER ─────────────────────────────────────
 /*
- * Three-tier fetch strategy for SerpAPI:
+ * Always route through /api/serp on the same server (server.js handles
+ * the HTTPS call to SerpAPI server-side — no CORS issues anywhere).
  *
- *  1. LOCALHOST (server.js running): route through /api/serp proxy on the
- *     same origin. server.js makes the HTTPS call to SerpAPI server-side,
- *     so there are zero CORS issues. This is the primary use case.
- *
- *  2. DEPLOYED (Netlify/Vercel etc): SerpAPI supports CORS with wildcard,
- *     so direct HTTPS fetch works fine.
- *
- *  3. FILE:// (opened directly from Finder): fall back to allorigins.win
- *     proxy as a last resort. Phase 2 enrichment is best-effort here.
+ * Works on:  localhost:8080  AND  Railway/any deployed host
+ * Fallback:  allorigins proxy only for file:// (opened directly from Finder)
  */
 async function serpFetch(params) {
     const qs = params.toString();
 
-    // Localhost → use local /api/serp proxy (server.js handles the HTTPS call)
-    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+    // Any HTTP/HTTPS origin → use /api/serp on the same server (no CORS)
+    if (location.protocol !== 'file:') {
         const res = await fetch(`/api/serp?${qs}`);
         if (!res.ok) {
             const e = await res.json().catch(() => ({}));
-            throw new Error(e.error || `Proxy HTTP ${res.status}`);
+            throw new Error(e.error || `Server error ${res.status}`);
         }
         return await res.json();
     }
 
-    // Deployed origin or any HTTP host → try SerpAPI directly
-    if (location.protocol !== 'file:') {
-        const res = await fetch(`${SERPAPI_URL}?${qs}`);
-        if (!res.ok) {
-            const e = await res.json().catch(() => ({}));
-            throw new Error(e.error || `HTTP ${res.status}`);
-        }
-        return await res.json();
-    }
-
-    // file:// fallback → allorigins proxy (Phase 2 enrichment is best-effort)
+    // file:// fallback → allorigins proxy (best-effort, no enrichment)
     const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(`${SERPAPI_URL}?${qs}`)}`;
     const res = await fetch(proxyUrl);
     if (!res.ok) throw new Error(`Proxy HTTP ${res.status}`);
     const wrapper = await res.json();
     return JSON.parse(wrapper.contents);
 }
+
 
 // ─── PHASE 2: AMAZON PAGE ENRICHMENT (via local server) ───────
 async function enrichViaProductAPI(products) {
