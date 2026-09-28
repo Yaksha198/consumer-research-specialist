@@ -1,0 +1,676 @@
+
+
+==================================================================
+FILE: README.md
+==================================================================
+
+# Physiology claims check: index
+
+Seven topic files. Each checks a claim made from memory in a coaching conversation.
+
+> **Read this first: how the citations were checked.** This environment's network policy blocked direct page fetches from PubMed, PMC, Europe PMC, Crossref and journal sites. So every citation was checked against search-engine copies of its PubMed or journal record: title, authors, journal, and abstract numbers. No full text was read. Anything not confirmed that way is marked **UNVERIFIED** in its file. Treat the numbers as abstract-level until someone checks them against the papers.
+
+| # | File | Headline answer | Confidence |
+|---|---|---|---|
+| 1 | [01-glycogen-water-binding.md](01-glycogen-water-binding.md) | Use "3–4 g water per g glycogen" instead of "~3 g"; it is a minimum, not a constant. Each 100 g of glycogen is about 0.4–0.5 kg on the scale. A 150–300 g carb day probably stores 100–200 g of glycogen in an insulin-resistant untrained man, about 0.4–1.0 kg. | medium |
+| 2 | [02-sodium-water-retention-kinetics.md](02-sodium-water-retention-kinetics.md) | 1 tsp salt is about 2.3 g sodium. That carries at most about 0.7 kg of water; expect +0.2–0.6 kg the next morning. The excess clears with a half-time of about 21 h and is gone by 72–96 h. Insulin itself makes the kidneys hold sodium, so a salty, carb-heavy meal can add 0.5–1.5 kg [guessing]. | medium |
+| 3 | [03-gut-content-meal-weight.md](03-gut-content-meal-weight.md) | Food in transit adds about ±0.1–0.4 kg the next morning, occasionally 0.5–0.7 kg with constipation or a large late dinner. It cannot explain swings of several kg. | medium |
+| 4 | [04-protein-leverage-appetite.md](04-protein-leverage-appetite.md) | "A low day after 2–3 high-protein days" is not a named or documented phenomenon; it is probably overfitting. The protein leverage hypothesis is about protein *share* driving overeating when protein is low. Also, at ~107 kg he eats 1.4–1.7 g/kg, not >2 g/kg. | medium |
+| 5 | [05-body-composition-partitioning.md](05-body-composition-partitioning.md) | Lean mass is a large share of early diet-only loss (about 50–60% at week 4, falling to 25–35% by week 24), much of it water. High protein spares roughly 0.4–0.6 kg of lean mass but does not build it without training. The bicep increase is most likely tape error or fluid. | medium |
+| 6 | [06-homa-ir-improvement-timeline.md](06-homa-ir-improvement-timeline.md) | About 0.15 HOMA-IR units per kg lost, front-loaded. Expect 3.58 → about 2.0–2.7 at 12 weeks. Within-person test noise is about 27%, so one retest proves real change only if it reads ≤ about 1.7–1.9. | low–medium |
+| 7 | [07-movement-for-time-constrained-beginner.md](07-movement-for-time-constrained-beginner.md) | Resistance training is the lever for lean mass, and 1×, 2× or 3× a week gives similar growth when weekly volume is equal. Steps are the lever you can keep up. Recommendation: short home RT "snacks" tied to a fixed cue, plus a step target instead of scheduled walks, with a defined floor for busy weeks. | medium |
+
+## Issues that affect several files
+
+- **The inputs contradict each other.** BMI 35 → 33 at a typical height is about 6 kg of loss, not the reported 9 kg. Topics 1, 5 and 6 compute both cases. Resolve this with actual height and weigh-ins before relying on any per-kg estimate.
+- **The protein threshold in the brief doesn't match the subject.** 150–180 g/day at ~105–110 kg is under 2 g/kg of actual body weight (topic 4).
+- **Ketosis can't be ruled out.** At 30–60 g carbs/day it confounds both the appetite question (topic 4) and the early "lean loss" readings (topic 5).
+- **Most trial populations don't match him.** They are mostly lean young men (topics 1–3), or adults around 65–70 on higher-carb diets (topic 7).
+
+## Combined estimate: a 1–1.5 kg overnight jump after a carb and salt refeed
+
+Glycogen water 0.4–1.0 kg (topic 1), sodium water 0.2–0.6 kg (topic 2), gut contents 0.1–0.4 kg (topic 3). These overlap: insulin drives both glycogen storage and sodium retention. A 1–1.5 kg overnight jump is therefore fully explained without any fat gain [likely]. Fat gain can't physically be that fast: 1 kg of fat is about 7,000+ kcal above maintenance.
+
+
+==================================================================
+FILE: 01-glycogen-water-binding.md
+==================================================================
+
+# Topic 1: Glycogen-water binding ratio
+
+> **Verification note (read first):** In this research session the network proxy blocked every direct page fetch (PubMed, PMC, Springer, Wiley, AJCN, MDPI, JCI, Europe PMC, Crossref all returned EGRESS_BLOCKED). Each citation below was checked against the search engine's indexed copy of the PubMed or journal record, which included the title, authors, journal, volume/pages or DOI, and abstract text. Nothing here is based on a full-text read. Items tagged **(abstract only, via index)** were confirmed that way. Items tagged **UNVERIFIED** did not show up in any indexed record. Please re-fetch the PubMed pages before publishing.
+
+## Plain-language answer
+The coach's "~3 g water per g glycogen" is about right as a working number, and it is better described as **3 to 4 g water per g glycogen** [likely]. The human data behind it are thin, all come from lean and mostly trained men, and all are measured indirectly. The ratio is also not a fixed chemical constant. When extra water is available, far more than 3 g may be stored alongside each gram of glycogen, and most of the "glycogen water" is ordinary cell water that behaves osmotically like any other [likely]. Counting the glycogen itself, **each 100 g of glycogen gained or lost moves body weight by about 0.4–0.5 kg** [likely]. For this subject, who eats 30–60 g of carbohydrate a day, is insulin-resistant and does no training, one higher-carb day (150–300 g carbohydrate) probably stores about 100–250 g of glycogen. That is roughly **0.4–1.2 kg** of scale weight [guessing]. It can plausibly account for part of a 1–1.5 kg overnight jump, but usually not all of it. Gut contents (the weight of the food itself) and insulin-driven renal sodium/water retention are separate and additive contributors [likely].
+
+## The numbers
+| Quantity | Value | Source / tag |
+|---|---|---|
+| Water stored per g glycogen (muscle), classic | 3–4 g | Olsson & Saltin 1970 (as interpreted); Kreitzman 1992 [likely] |
+| Water per g glycogen, limited-fluid recovery | ~3 g (1:3) | Fernández-Elías 2015 [certain for that study] |
+| Water per g glycogen, full-fluid recovery | ~17 g (1:17), mostly water not bound to glycogen | Fernández-Elías 2015 [certain for that study] |
+| Range commonly quoted in recent primary work | 2.7–4 g | Shiose 2016 (introduction) [likely] |
+| Potassium stored with glycogen | 0.45 mmol K per g glycogen | Kreitzman 1992 [likely] |
+| Weight change in carb loading (depleted to loaded, 4 d) | +2.4 kg body weight, +2.2 L total body water | Olsson & Saltin 1970 [certain for that study] |
+| Muscle glycogen, depleted to loaded | thigh 4.5 to 19.9 g/kg wet muscle; arm 2.6 to 16.9 g/kg | Olsson & Saltin 1970 |
+| Liver glycogen, normal (overnight fast) | 232 mmol glucosyl/kg (about 38 g/kg liver) | Nilsson & Hultman 1973 |
+| Liver glycogen on starvation or a carb-poor diet | 24–55 mmol/kg (about 4–9 g/kg) within 24 h, staying low for up to 9 more days | Nilsson & Hultman 1973 |
+| Liver glycogen after carb refeeding | 424–624 mmol/kg (about 69–101 g/kg), "supernormal" | Nilsson & Hultman 1973 |
+| Typical whole-body glycogen (lean adult, mixed diet) | ~600 g (≈500 g muscle + ≈100 g liver) | Murray & Rosenbloom 2018 [likely] |
+| Maximal whole-body glycogen capacity | ~15 g/kg body weight | Acheson 1988 (n=3, extreme overfeeding) [likely] |
+| Water share of early weight loss, 800-kcal ketogenic diet | 61.2% (vs 37.1% on mixed diet); 466.6 vs 277.9 g/day | Yang & Van Itallie 1976 [certain for that study] |
+
+Conversion: 1 mmol glucosyl unit = 0.162 g glycogen.
+
+## Insulin resistance / population caveat
+- **Every ratio study used lean, healthy, mostly trained men**, and most started glycogen-depleted by exercise. None looked at obese or insulin-resistant people, or at anyone on a chronic 30–60 g/day intake. The ratio probably holds per gram because it reflects cell water and osmotic physics, but **how many grams get stored** will differ [likely].
+- **Insulin resistance slows muscle glycogen storage.** Under matched hyperglycaemic-hyperinsulinaemic clamp conditions, people with type 2 diabetes synthesised muscle glycogen at 78±28 vs 183±39 µmol/kg muscle/min, about 43% of the normal rate (Shulman 1990). The subject is insulin-resistant, not diabetic, so his impairment is probably milder. Either way, a single refeed will likely store **less** glycogen than the lean-athlete studies suggest [likely].
+- **No exercise means no exercise-driven boost to glycogen synthesis.** Every loading study used depletion exercise first. Sedentary refeeding is slower [likely].
+- **Chronic low carb:** keto-adapted elite endurance athletes (Volek 2016) had resting muscle glycogen similar to high-carb athletes. This cannot be carried over to a sedentary, insulin-resistant man, whose muscle glycogen is not being drawn down by training and who has no training stimulus to rebuild it. For him the liver is the clearer effect: it drops to about 10–25% of normal within 24 h on a carb-poor diet and stays there (Nilsson & Hultman 1973) [likely].
+- Liver and muscle mass are larger in obesity, so absolute stores may be larger than in lean people, not smaller [guessing].
+
+## Sources
+### 1. Olsson & Saltin 1970
+- **Citation:** Olsson KE, Saltin B. 1970. Variation in total body water with muscle glycogen changes in man. *Acta Physiol Scand* 80(1):11–18. DOI 10.1111/j.1748-1716.1970.tb04764.x; PMID 5475323. https://pubmed.ncbi.nlm.nih.gov/5475323/ (abstract only, via index)
+- **Population:** 19 subjects (sex and body composition not stated in the abstract; the era suggests healthy young men), depleted by heavy arm and leg exercise and then 3 days of protein/fat diet.  **Mismatch vs subject:** lean, exercise-depleted, no insulin resistance.
+- **Finding / number:** Carb loading for 4 days raised thigh glycogen from 4.5 to 19.9 g/kg and arm glycogen from 2.6 to 16.9 g/kg. Body weight rose 2.4 kg and total body water rose 2.2 L (tritium dilution), which the authors attributed to glycogen storage. Later reviews read this as 3–4 g water per g glycogen. **The frequently quoted "2.7 g" does not appear in the abstract.** Its origin is unclear and is UNVERIFIED as an Olsson & Saltin number.
+- **Quality / limitations:** The ratio is indirect: whole-body water is divided by glycogen extrapolated from biopsies, and liver glycogen was not measured.
+
+### 2. Fernández-Elías et al. 2015
+- **Citation:** Fernández-Elías VE, Ortega JF, Nelson RK, Mora-Rodriguez R. 2015. Relationship between muscle water and glycogen recovery after prolonged exercise in the heat in humans. *Eur J Appl Physiol* 115:1919–1926. DOI 10.1007/s00421-015-3175-z; PMID 25911631. https://pubmed.ncbi.nlm.nih.gov/25911631/ (abstract only, via index)
+- **Population:** 9 aerobically trained subjects, dehydrated by 4.6% during 150 min of cycling in the heat.  **Mismatch vs subject:** trained, lean, dehydrated and depleted, acute setting.
+- **Finding / number:** Recovery with 250 g carbohydrate in 400 mL water stored about 3 g water per g glycogen (1:3). The same carbohydrate plus about 3.17 L water gave about 1:17. The authors conclude "at least 3 g" per g glycogen, and attribute the extra water to storage not bound to glycogen.
+- **Quality / limitations:** Small sample, and this is the only direct biopsy test of the ratio. It shows the ratio depends on how much water is taken in.
+
+### 3. Kreitzman, Coxon & Szaz 1992
+- **Citation:** Kreitzman SN, Coxon AY, Szaz KF. 1992. Glycogen storage: illusions of easy weight loss, excessive weight regain, and distortions in estimates of body composition. *Am J Clin Nutr* 56(1 Suppl):292S–293S. PMID 1615908. https://pubmed.ncbi.nlm.nih.gov/1615908/ (abstract only, via index; DOI not seen)
+- **Population:** 11 dieters on a VLCD for 4 days (presumably obese).  **Mismatch vs subject:** VLCD rather than low carb at about 2000 kcal. Closer in adiposity to the subject.
+- **Finding / number:** Glycogen is stored in liver, muscle and fat cells with 3–4 parts water and 0.45 mmol K/g. Early changes in total body potassium mainly reflect glycogen. The paper warns about "exaggerated regain" when carbohydrate is loaded again. The abstract gives no numeric glycogen mass for the 11 subjects.
+- **Quality / limitations:** A two-page conference supplement. The 3–4 figure is asserted rather than newly measured.
+
+### 4. Nilsson & Hultman 1973 (liver)
+- **Citation:** Nilsson LH, Hultman E. 1973. Liver glycogen in man — the effect of total starvation or a carbohydrate-poor diet followed by carbohydrate refeeding. *Scand J Clin Lab Invest* 32(4):325–330. DOI 10.3109/00365517309084355 (abstract only, via index; PMID not seen)
+- **Population:** 19 human subjects, repeated percutaneous liver biopsies.  **Mismatch vs subject:** healthy, and adiposity is unknown.
+- **Finding / number:** Liver glycogen was 232 mmol/kg after an overnight fast. It fell to 24–55 within 24 h of starvation or a carb-poor diet, stayed low for up to 9 more days, and rebounded to 424–624 mmol/kg on refeeding.
+- **Quality / limitations:** Old, invasive and small, but still the standing human biopsy reference.
+
+### Supporting / conflicting sources
+- **Yang & Van Itallie 1976**, *J Clin Invest* 58(3):722–730, https://www.jci.org/articles/view/108519 (abstract only, via index; DOI/PMID not seen). 6 obese subjects in 10-day periods. The 800-kcal ketogenic diet lost 466.6 g/day, of which 61.2% was water. The isocaloric mixed diet lost 277.9 g/day, 37.1% water. **This is the closest population match.**
+- **King, Jones & O'Hara 2018**, *Eur J Appl Physiol*, "The availability of water associated with glycogen during dehydration: a reservoir or raindrop?" DOI 10.1007/s00421-017-3768-9; PMID 29196846 (abstract only, via index; volume/pages UNVERIFIED). At about 2% glycogen concentration, glycogen-associated water is fully osmotically available. At 5–10%, only about 10–20% of it is "protected". It is not a separate reservoir. (This is probably the "King et al. 2018" the coach half-remembered. It is in EJAP, not J Appl Physiol.)
+- **Sherman et al. 1982**, *Int J Sports Med* 3:22–24, DOI 10.1055/s-2008-1026056, PMID 7068293. **Conflicting.** In rats, muscle glycogen ranged from 10.0 to 30.2 µmol/g, and muscle water "showed no consistent relationship" to glycogen. This is rodent data.
+- **Shiose et al. 2016**, *J Appl Physiol* 121:205–211, DOI 10.1152/japplphysiol.00126.2016. n=8, 12 g/kg/day carbohydrate for 72 h, 13C-MRS glycogen and deuterium total body water. Total body water rose, mainly as intracellular water. The introduction cites 2.7–4 g/g. Numeric results were not seen.
+- **Bone et al. 2017**, *Med Sci Sports Exerc*, DOI 10.1249/MSS.0000000000001174, PMID 28410328. Glycogen loading in 18 trained cyclists raised total body water by 2.3% and DXA "lean mass" by 2–3%. Glycogen swings therefore distort body-composition scans.
+- **Shulman et al. 1990**, *NEJM* 322:223–228, DOI 10.1056/NEJM199001253220403, PMID 2403659. Numbers are under the caveat above.
+- **Acheson et al. 1988**, *Am J Clin Nutr*, PMID 3165600 (volume/pages UNVERIFIED). n=3 men. Glycogen capacity is about 15 g/kg body weight, and roughly 500 g can be gained before net lipogenesis begins.
+- **Murray & Rosenbloom 2018**, *Nutr Rev* 76(4):243–259, DOI 10.1093/nutrit/nuy001. Whole-body glycogen is about 600 g (the figure was seen only in an index summary).
+- **Volek et al. 2016**, *Metabolism*, PMID 26892521 (volume/pages UNVERIFIED). n=20 elite ultra-endurance athletes on about 20 months of low carb. Resting muscle glycogen was not different from high-carb athletes.
+
+## Disagreements between sources
+- **The ratio itself:** Olsson & Saltin and Kreitzman give 3–4. Fernández-Elías found "at least 3" and up to 17 with free water. Sherman found no consistent relationship in rats. King argues most of the water is not specifically "bound". **Resolution:** 3–4 g/g is a reasonable minimum for scale-weight estimates. The upper end is set by hydration and sodium, not by glycogen chemistry.
+- **The "2.7 g" figure** is widely repeated. It does not appear in the Olsson & Saltin abstract and was seen only as part of a "2.7–4" range in Shiose 2016. Its original source is unconfirmed.
+- **Low-carb baseline:** Volek (athletes) found normal muscle glycogen on keto. Nilsson & Hultman found the liver collapses on a carb-poor diet. These are compatible, because muscle and liver respond differently. For a sedentary person it is unknown whether muscle glycogen stays normal.
+
+## Applying it to the subject
+Assumptions: about 100–110 kg, skeletal muscle about 35 kg [guessing], liver about 1.8 kg [guessing].
+
+1. **Mixed-diet stores:** muscle about 35 kg × 13–16 g/kg ≈ 450–560 g, plus liver about 1.8 kg × ~38 g/kg ≈ 70 g. Total ≈ **520–630 g** [likely].
+2. **Chronic 30–60 g/day stores:** liver ≈ 7–16 g (4–9 g/kg). Muscle is uncertain: perhaps 250–450 g [guessing]. The total is about **260–470 g**, roughly 150–350 g below mixed-diet levels.
+3. **Weight effect of the initial switch to low carb:** 150–350 g glycogen × 4–5 (1 g glycogen plus 3–4 g water) ≈ **0.6–1.75 kg**. Add the natriuresis of carb restriction (see sodium topic). Yang & Van Itallie's 61% water share is consistent with this. Of a reported 9 kg loss in 5 weeks, perhaps 1–2.5 kg is glycogen-linked water plus sodium-linked water [likely]. (The BMI change 35 to 33 implies only about 6 kg at typical height, so this discrepancy should be checked. If the true loss is about 6 kg, the water share is proportionally larger.)
+4. **One higher-carb day, worked estimate** (ratio 3–4 g/g, glycogen mass included):
+   - +150 g glycogen: 150 × 4 to 150 × 5 = **0.60–0.75 kg**
+   - +300 g glycogen: 300 × 4 to 300 × 5 = **1.2–1.5 kg**
+   - Storing 300 g of glycogen in one day, with insulin resistance and no exercise, probably needs well over 400 g of carbohydrate. A 150–300 g carbohydrate day more plausibly stores about 100–200 g, which is **0.4–1.0 kg** [guessing].
+5. **Maximum plausible swing** from low-carb baseline to fully loaded (about 800–1,000 g), counting only glycogen and its water: ≈ (400–700 g) × 4–5 ≈ **1.6–3.5 kg**. Olsson & Saltin measured 2.4 kg empirically [likely].
+6. **Confound:** refeeding raises insulin, which increases renal sodium reabsorption and so retains extracellular water. This is a separate mechanism from glycogen-bound (intracellular) water, and it is *not* included in the 3–4 g/g ratio. Glycogen storage also takes up potassium (0.45 mmol/g). Undigested food and fibre in the gut add their own mass. A 1–1.5 kg overnight gain after a refeed is therefore likely a mix of about 0.4–1.0 kg glycogen water, plus sodium-retained water, plus gut contents. It should not be read as fat gain [likely].
+
+Confidence: medium. The 3–4 g/g ratio agrees across sources and matches the whole-body data, but every ratio study is in lean, trained, exercise-depleted men. The subject's actual stores and his storage rate under insulin resistance are estimated, not measured. And no source could be fetched in full for this write-up.
+
+
+==================================================================
+FILE: 02-sodium-water-retention-kinetics.md
+==================================================================
+
+# Topic 2: Sodium and water retention kinetics
+
+> **Verification note (read first):** During this research session the network egress proxy blocked every page fetch (PubMed, PMC, Europe PMC, journal sites, Crossref). Citations below were checked against the **search-engine index of the PubMed or journal page**: title, authors, journal, volume and pages, plus the abstract text shown in the search result. None were read in full. Each one is marked "(abstract/index only)". The worked arithmetic is my own calculation from those numbers.
+
+## Plain-language answer
+Extra sodium is held with water: roughly 1 L (≈1 kg) of water for every ~3.2 g of sodium kept in the extracellular fluid. The kidneys clear a salt surplus in a roughly exponential way, with a half-time of about 21 h, and reach a new balance in about 3 days. So if you ate ~2.3 g more sodium (≈1 tsp salt) than usual yesterday, the scale this morning might show about **+0.2 to +0.6 kg**. Most of that is gone within **2-3 days** once intake returns to normal [likely]. That is far too fast and too large to be fat: 0.5 kg of fat overnight would need a surplus of several thousand kcal [certain]. Two things can make the salt effect bigger or smaller. First, long-term Mars-simulation studies show the body can gain or lose several hundred mmol of sodium with no matching change in weight, so the "sodium always carries water" rule does not hold exactly [likely]. Second, for a low-carb dieter, a meal that is both salty and high in carbs makes things worse. Insulin roughly halves how fast the kidney excretes sodium, and bringing back carbs after restriction causes fast sodium and water retention [likely].
+
+## The numbers
+| Quantity | Value | Basis |
+|---|---|---|
+| Sodium in 1 tsp salt (5.8 g NaCl) | ~2.3 g = ~100 mmol | 2300 mg ÷ 23 mg/mmol [certain] |
+| Isotonic equivalence (ECF Na ~140 mmol/L) | 1 L water per 140 mmol = 3.2 g Na = 8.2 g NaCl; ≈7 g water per mmol Na; ≈310 g water per g Na | arithmetic [certain as a ceiling if retained isotonically] |
+| 100 mmol retained isotonically | ≈0.71 L ≈ 0.71 kg | arithmetic |
+| Half-time of transition between sodium steady states | ~21 h (Bie review); 21.8 ± 2.4 h during restriction (Sagnella) | Sources 1, 2 |
+| ΔTotal-body Na / Δ(daily Na intake) | ≈1.3 days (i.e., +100 mmol/day sustained → ≈+130 mmol TBS ≈ 0.9 L if isotonic) | Source 1 |
+| Time to new steady state after raising intake | within ~3 days (not mono-exponential) | Source 2 |
+| Non-water-linked swings in total-body Na at fixed intake | ±200-400 mmol, with no parallel change in body weight or ECW | Source 3 |
+| Insulin effect on urinary Na excretion (clamp) | 401 → 213 µeq/min (−47%), GFR unchanged | Source 4 |
+| Same in obese vs lean adolescents | −54% obese vs −51% non-obese (effect preserved despite insulin resistance) | Supporting (Rocchini) |
+| 3-day fast | ~800 g/day weight loss with progressive natriuresis; carbohydrate refeeding → rapid Na retention | Supporting (Veverbrants & Arky) |
+
+## Insulin resistance / population caveat
+- **The sodium-retaining effect of insulin is kept in insulin resistance.** Rocchini et al. 1989 found that obese adolescents, who were much less sensitive to insulin for glucose uptake, reduced their sodium excretion by the same amount as lean controls. This is the "selective insulin resistance" idea: the body resists insulin's effect on glucose but not its effect on sodium. For a person with HOMA-IR 3.58, a carb meal and its bigger insulin spike can probably cause *more* sodium retention than in a lean person, not less [likely].
+- **The low-carb state removes this brake.** Low insulin plus ketosis causes natriuresis (extra sodium loss in urine). On an 800 kcal ketogenic diet, 61% of the weight lost by obese subjects over 10 days was water, against 37% on a mixed diet (Yang & Van Itallie 1976, JCI 58:722-30, doi:10.1172/JCI108519; abstract/index only). Bringing back carbs reverses this quickly (Veverbrants & Arky). So a salty, carb-heavy meal for this subject sets off **three** water-gaining effects at once: the sodium load itself, insulin-driven retention of sodium already in the body, and water stored with glycogen (glycogen is covered in another topic, not verified here). The total can easily be above the salt-only estimate [likely].
+- **Obesity and diabetes may change tissue sodium storage.** 23Na-MRI found higher muscle sodium (20.6 vs 16.3 mmol/L) and skin sodium (24.5 vs 20.6 mmol/L) in type 2 diabetes (n=59) than in people with primary hypertension (Kannenkeril et al. 2019, J Diabetes Complications 33(7):485-489, doi:10.1016/j.jdiacomp.2019.04.006, PMID 31101486; abstract/index only). Whether this shifts short-term water kinetics in someone who is insulin-resistant but not diabetic is **unknown** [guessing].
+- **All the core kinetic data come from a different population.** The subjects were healthy, mostly normal-weight young men on fixed metabolic-ward diets. None were obese, insulin-resistant or on low-carb diets.
+- **Discrepancy in the reported weight loss.** The subject reports ~9 kg lost, but a BMI change from 35 to 33 suggests ~6 kg. Early low-carb loss is largely water (see above). That could explain the gap, and it also means several kg could come back quickly as water after a carb and salt refeed, without any fat gain.
+
+## Sources
+### 1. Bie 2018 review (standing quantitative model)
+- **Citation:** Bie P. 2018. Mechanisms of sodium balance: total body sodium, surrogate variables, and renal sodium excretion. *Am J Physiol Regul Integr Comp Physiol*. doi:10.1152/ajpregu.00363.2017. https://journals.physiology.org/doi/full/10.1152/ajpregu.00363.2017 (abstract/index only; volume and pages not confirmed)
+- **Population:** Review of human balance studies. **Mismatch vs subject:** mostly healthy normal-weight adults.
+- **Finding / number:** Total-body Na ≈4,200 mmol. Transitions between steady states have T½ ≈21 h. ΔTBS/Δ(intake/day) ≈1.3 days. The review also covers "uneven, nonosmotic distribution" of extra sodium, mainly in skin, and long-term instability of total-body sodium even when intake is constant.
+- **Quality / limitations:** Authoritative synthesis. It openly says the classic model is incomplete.
+
+### 2. Sagnella et al. 1990 (direct kinetic measurement)
+- **Citation:** Sagnella GA, Markandu ND, Singer DR, MacGregor GA. 1990. Kinetics of renal sodium excretion during changes in dietary sodium intake in man: an exponential process? *Clin Exp Hypertens A* 12(2):171-178. doi:10.3109/10641969009074726. https://www.tandfonline.com/doi/abs/10.3109/10641969009074726 (abstract/index only; PMID not confirmed)
+- **Population:** Normal subjects. n=8 went from normal intake to 10 mmol/day for 6 days; n=6 went from 10 to 350 mmol/day for 5 days. **Mismatch vs subject:** healthy, not obese, large step changes.
+- **Finding / number:** When intake was cut, excretion fell mono-exponentially with T½ 21.8 ± 2.4 h. When intake was raised, excretion reached the new steady state **within 3 days** but did not follow a single exponential.
+- **Quality / limitations:** Small n. Weight and body water were not reported in the abstract.
+
+### 3. Rakova et al. 2013 and Lerchl et al. 2015 (Mars-500 ultra-long balance)
+- **Citation:** Rakova N, Jüttner K, Dahlmann A, et al. 2013. Long-term space flight simulation reveals infradian rhythmicity in human Na+ balance. *Cell Metab* 17(1):125-131. PMID 23312287. https://pubmed.ncbi.nlm.nih.gov/23312287/. Companion paper: Lerchl K, Rakova N, Dahlmann A, et al. 2015. Agreement between 24-hour salt ingestion and sodium excretion in a controlled environment. *Hypertension* (Oct 2015). PMID 26259596, doi:10.1161/HYPERTENSIONAHA.115.05851 (both abstract/index only)
+- **Population:** 10 healthy men in 105-day (n=4) and 205-day (n=6) confinement, with salt fixed at 12, 9 and 6 g/day. **Mismatch vs subject:** healthy, sedentary confinement, not obese.
+- **Finding / number:** Urinary sodium excretion followed weekly rhythms driven by aldosterone. Total-body Na moved by **±200-400 mmol** over roughly monthly cycles **without parallel changes in body weight or extracellular water**. Across the whole study, 92% of dietary salt was recovered in urine. A single 24-h urine could not detect a 3 g/day difference in salt intake.
+- **Quality / limitations:** Unusually precise long-term control, but very small n.
+
+### 4. DeFronzo et al. 1975 (insulin antinatriuresis)
+- **Citation:** DeFronzo RA, Cooke CR, Andres R, Faloona GR, Davis PJ. 1975. The effect of insulin on renal handling of sodium, potassium, calcium, and phosphate in man. *J Clin Invest* 55:845-855. doi:10.1172/JCI107996. PMID 1120786. https://pubmed.ncbi.nlm.nih.gov/1120786/ (abstract/index only)
+- **Population:** 6 water-loaded normal subjects on a euglycaemic insulin infusion (2 mU/kg/min; insulin 98-193 µU/mL). **Mismatch vs subject:** lean, healthy, insulin levels above typical post-meal values.
+- **Finding / number:** Urinary sodium excretion fell from 401 ± 46 to 213 ± 18 µeq/min with no change in GFR or renal plasma flow. The site was the distal nephron.
+- **Quality / limitations:** Acute, n=6, infusion model rather than a meal.
+
+**Supporting / conflicting sources (abstract/index only):**
+- Heer M, Baisch F, Kropp J, Gerzer R, Drummer C. 2000. *Am J Physiol Renal* 278(4):F585-F595, doi:10.1152/ajprenal.2000.278.4.F585, PMID 10751219. 32 healthy men, NaCl 50/200/400/550 mmol/day. Sodium balance was positive and plasma volume rose (+315 ± 37 mL at 550 mmol), but **total body water and body mass did not increase**. A later criticism is that potassium balance was not accounted for.
+- Rakova N, et al. 2017. *J Clin Invest* 127(5):1932-1943, PMID 28414302. At +6 g/day salt, men drank *less* water and conserved water through urine concentration.
+- Rocchini AP, Katch V, et al. 1989. *Hypertension* 14:367-374, doi:10.1161/01.HYP.14.4.367. Insulin cut sodium excretion by 54% in obese adolescents and 51% in non-obese young adults.
+- Veverbrants E, Arky RA. 1969. *J Clin Endocrinol Metab* 29(1):55-62, doi:10.1210/jcem-29-1-55. Carbohydrate refeeding after a 3-day fast caused rapid sodium retention; fat refeeding did not.
+- Brands MW, Manhiani MM. 2012. *Am J Physiol Regul Integr Comp Physiol* 303:R1101-R1109, doi:10.1152/ajpregu.00390.2012. Insulin's *chronic* sodium-retaining and hypertensive role is contested (insulinoma patients are not hypertensive; dog studies were negative).
+- Strauss MB, et al. 1958. *AMA Arch Intern Med* 102:527-536. The original "kinetic concept": total-body sodium keeps fluctuating around a set point.
+
+## Disagreements between sources
+- **Isotonic model vs nonosmotic storage.** The classic balance model (Bie's description of the classic model, Sagnella, Strauss) assumes retained sodium brings isotonic water with it. Heer 2000 and Rakova 2013 found positive sodium balance, or total-body Na swings of 200-400 mmol (isotonic equivalent ≈1.4-2.9 L), **without** matching weight change. The critics' reply, from dog balance studies and the potassium-accounting critique of Heer, is that part of this is measurement error. This is unresolved. In practice it means the isotonic figure is an **upper bound** for water retention, not a fixed constant.
+- **Speed of the rise vs the fall.** Excretion falls mono-exponentially (T½ ≈21 h) when sodium is cut. When sodium is added it adapts within 3 days but not mono-exponentially (Sagnella). So a single-exponential washout model is only approximate.
+- **Acute vs chronic insulin effect.** The acute antinatriuresis is well replicated (DeFronzo, Rocchini). Whether it causes lasting sodium retention is disputed (Brands & Manhiani). For a question about the next day's scale reading, the acute effect is the one that matters.
+
+## Applying it to the subject
+**Scenario:** baseline 2-3 g Na/day (~90-130 mmol), plus 2.3 g (100 mmol) on one day, then back to baseline.
+- **Isotonic ceiling:** 100 mmol ÷ 140 mmol/L ≈ 0.7 kg if none of it had been excreted.
+- **Next morning** (~12-18 h after the average time of intake), using τ ≈ 1.3 d (T½ ≈ 21 h): retained fraction ≈ e^(−12/31) to e^(−18/31), or 0.56-0.68. That leaves 56-68 mmol, **≈0.4-0.5 kg** if isotonic.
+- **Adjusting for nonosmotic storage and day-to-day noise** (Heer, Rakova): realistic range **+0.2 to +0.6 kg** [likely]. Salt alone would rarely push this above ~0.7 kg [likely].
+- **Washout:** about 0.2 kg left on day 2, under 0.1 kg by day 3, and effectively gone by 72-96 h [likely]. That assumes water and potassium intake stay normal.
+- **If the salty meal also contained substantial carbohydrate** after weeks at 30-60 g/day: add insulin-driven retention of sodium already in the body and glycogen water. **+0.5 to 1.5 kg next morning** is plausible, returning to trend over 2-4 days of going back to low carb [guessing: not directly measured in this population].
+- **Practical rule:** a jump overnight or across 1-2 days that fades within 3-4 days is water. Fat gain shows up as a slow trend that lasts beyond a week. Judge progress on a 7-day rolling average, and treat the morning after a restaurant meal or a carb refeed as noise. A true 0.5 kg fat gain would need an energy surplus of several thousand kcal (standard ~7,000-7,700 kcal/kg adipose tissue approximation, not re-verified here).
+
+Confidence: medium, because the isotonic arithmetic and the ~21 h half-time are solid, but the core data come from small groups of healthy lean men, the Titze/Heer work shows the water-per-sodium link is weaker than the classic model assumes, no study measured next-morning weight after a single mixed salt-and-carb meal in obese insulin-resistant people, and I could only check abstracts and index records (no full text).
+
+
+==================================================================
+FILE: 03-gut-content-meal-weight.md
+==================================================================
+
+# Topic 3: Meal / gut-content weight
+
+## Plain-language answer
+Any food you have eaten but not yet passed adds to what the scale shows. How much depends on where the food is. A standard small test meal mostly leaves the stomach within about 4 hours, and fluids are absorbed fast, so by the next morning very little of last night's dinner is still in the stomach. What remains is the colon's standing content. MRI puts it at about 0.5-0.6 kg in healthy adults (roughly 480 mL on a low-fibre diet and 620 mL on a high-fibre diet). About a third of that turns over each day through meals and bowel movements. Adults in Western countries pass roughly 100-130 g of stool a day on average. So the day-to-day scale swing that comes purely from "food in transit" is on the order of **0.1-0.4 kg**. It can reach about 0.5 kg or more after a large late meal, a skipped bowel movement, or both. That is real, but it is smaller than the swings from water and glycogen. A low-carb, low-fibre diet lowers stool mass and the standing colonic content. It also makes constipation more common, which makes the day-to-day number noisier.
+
+## The numbers
+| Quantity | Value | Source | Tag |
+|---|---|---|---|
+| Normal gastric retention, 255 kcal low-fat egg-white meal | 37-90% at 1 h; 30-60% at 2 h; 0-10% at 4 h | Abell 2008 consensus | [certain] |
+| Capsule-measured transit (healthy) | Gastric 2-5 h; small bowel 2-6 h; colon 10-59 h; whole gut 10-73 h | Wang 2015 (WMC) | [likely] |
+| Fasting colon volume (healthy) | Ascending 203±75, transverse 198±79, descending 160±86 mL (sum ~560 mL); ascending colon +10% after feeding | Pritchard 2014 (MRI) | [likely] |
+| Non-gaseous colonic content | 479±36 mL (low-residue diet) vs 616±55 mL (high-residue diet) | Bendezú 2017 (MRI) | [likely] |
+| Daily faecal output | 145±15 mL/day (low-residue) vs 223±19 mL/day (high-residue) | Bendezú 2017 | [likely] |
+| Right-colon content change 4 h after a meal | +41±11 mL (fed) vs −15±8 mL (fasted) | Bendezú 2017 | [likely] |
+| Daily colonic turnover | ~1/3 of content per day | Bendezú 2017 | [likely] |
+| Stool wet mass, UK adults | Median 106 g/day (men 104, women 99); world population means 72-470 g/day | Cummings 1992 | [certain] |
+| Stool wet mass, pooled literature | Median 128 g/day (range of study means 51-796); ~2x higher in high-fibre, low-income settings; 1.20 bowel movements/day | Rose 2015 | [certain] |
+| Weekly weight cycle | ~0.35% of body weight (men 0.41%, women 0.29%) | Orsama 2014; Turicchia 2020 | [likely] |
+| Constipation on a ketogenic diet vs a low-fat diet | 68% vs 35% | Yancy 2004 | [likely] |
+| Within-day swing of 0.5-2 kg (a figure often quoted) | Not verified in this session | none | [guessing] |
+
+## Insulin resistance / population caveat
+- Every transit and colon-volume figure above comes from **healthy, mostly normal-weight volunteers**. None comes from insulin-resistant adults with Class II obesity. I could not check whether colon volume scales with body size.
+- The Abell reference meal is **255 kcal and low-fat**. A 700-1000 kcal high-protein, high-fat dinner empties more slowly, so the 4-hour retention figure understates how long it stays in the stomach. This is a general physiological principle that I did not check against a specific source in this session. Even so, a 10-12 hour overnight gap is almost certainly enough for the stomach to empty [likely].
+- Diabetic hyperglycaemia is known to slow gastric emptying. The subject has IR but not diagnosed diabetes. The data on gastric emptying in obesity alone is inconsistent, and I did not verify it here.
+- The **low-carb evidence does come from obese populations**. Brinkworth 2009 studied adults with abdominal obesity (BMI 26-44) and found that the very-low-carb diet lowered faecal output and defecation frequency. Yancy 2004 found much more constipation on a ketogenic diet. So for this subject, expect a **smaller standing stool mass** but **more irregular emptying**.
+
+## Sources
+*Verification note: the network egress proxy blocked every page fetch in this session (PubMed, PMC, Wiley, T&F, Karger, PLOS, Cambridge, Crossref, EuropePMC). Each citation and number below comes from search-engine result text that quoted the abstract or publisher page. None comes from a page I fetched myself. Treat them as "abstract-level, snippet-verified", which is one step below the brief's standard.*
+
+### 1. Abell 2008 gastric emptying consensus
+- **Citation:** Abell TL, Camilleri M, Donohoe K, et al. 2008. Consensus recommendations for gastric emptying scintigraphy: a joint report of the American Neurogastroenterology and Motility Society and the Society of Nuclear Medicine. *Am J Gastroenterol* (March 2008). PMID 18287197. https://pubmed.ncbi.nlm.nih.gov/18287197/ (volume/pages not confirmed; also reprinted in *J Nucl Med Technol* 36(1):44)
+- **Population:** reference ranges from healthy adults. **Mismatch vs subject:** healthy, normal-weight; the test meal is far smaller than a real dinner.
+- **Finding / number:** retention 37-90% at 1 h, 30-60% at 2 h, 0-10% at 4 h. Retention above 10% at 4 h counts as delayed emptying.
+- **Quality / limitations:** standing clinical standard; only a small, low-fat meal was tested; the ranges quoted come from a secondary snippet.
+
+### 2. Bendezú 2017 colonic content (Azpiroz group, MRI)
+- **Citation:** Bendezú RA, Mego M, Monclus E, Merino X, Accarino A, Malagelada JR, Navazo I, Azpiroz F. 2017. Colonic content: effect of diet, meals, and defecation. *Neurogastroenterol Motil* 29(2):e12930. DOI 10.1111/nmo.12930; PMID 27545449. https://pubmed.ncbi.nlm.nih.gov/27545449/ (abstract only)
+- **Population:** 10 healthy subjects (age/sex/BMI not confirmed). **Mismatch vs subject:** very small, healthy group; the diets lasted only 3 days.
+- **Finding / number:** low- vs high-residue diet: colonic content 479 vs 616 mL; faecal output 145 vs 223 mL/day; right-colon content +41 mL 4 h after a meal; about 1/3 of content turns over daily.
+- **Quality / limitations:** the most direct measurement of "mass in transit", but n=10.
+
+### 3. Rose 2015 faeces/urine review, and Cummings 1992
+- **Citation:** Rose C, Parker A, Jefferson B, Cartmell E. 2015. The characterization of feces and urine: a review of the literature to inform advanced treatment technology. *Crit Rev Environ Sci Technol* 45(17):1827-1879. DOI 10.1080/10643389.2014.1000761; PMID 26246784; PMC4500995. https://pmc.ncbi.nlm.nih.gov/articles/PMC4500995/
+- **Supporting:** Cummings JH, Bingham SA, Heaton KW, Eastwood MA. 1992. Fecal weight, colon cancer risk, and dietary intake of nonstarch polysaccharides (dietary fiber). *Gastroenterology* 103(6):1783-1789. PMID 1333426. https://pubmed.ncbi.nlm.nih.gov/1333426/ (abstract only)
+- **Population:** Rose pools 116 study means from healthy individuals worldwide. Cummings measured 220 healthy UK adults. **Mismatch vs subject:** mixed-diet populations, not low-carb and not obese.
+- **Finding / number:** Rose: median 128 g/day wet (29 g dry); fibre intake is the main driver; about 2x higher in high-fibre populations. Cummings: UK median 106 g/day; population means 72-470 g/day.
+- **Quality / limitations:** large pooled datasets, but between-study methods vary.
+
+### 4. Wang 2015 wireless motility capsule normal values
+- **Citation:** Wang YT, et al. 2015. Regional gastrointestinal transit and pH studied in 215 healthy volunteers using the wireless motility capsule: influence of age, gender, study country and testing protocol. *Aliment Pharmacol Ther* 42:761-772. DOI 10.1111/apt.13329; PMID 26223837. https://pubmed.ncbi.nlm.nih.gov/26223837/ (abstract only)
+- **Population:** 215 healthy volunteers across several countries. **Mismatch vs subject:** healthy; not obese.
+- **Finding / number:** normal ranges of 2-5 h gastric, 2-6 h small bowel, 10-59 h colon, 10-73 h whole gut. Women had longer whole-gut transit by a median of 263 min. The ranges may come from a secondary review quoting this dataset.
+- **Quality / limitations:** the capsule is indigestible and leaves the stomach with the fasting motility cycle, so its gastric time is not the same as meal emptying.
+
+**Supporting / conflicting sources (snippet-verified only):**
+- Pritchard SE, et al. 2014. Fasting and postprandial volumes of the undisturbed colon… *Neurogastroenterol Motil* 26(1):124-130. PMID 24131490. MRI in healthy volunteers: segment volumes as in the table. The link between these numbers and this paper came from the snippet and was not confirmed directly.
+- Degen LP, Phillips SF. 1996. Variability of gastrointestinal transit in healthy women and men. *Gut* 39(2):299-305. PMID 8977347. n=32 (20 men, 12 women). Colonic transit was faster in men, and a single measurement in one person could vary a lot. **Mean hours not obtained (UNVERIFIED)**.
+- Brinkworth GD, et al. 2009. *Br J Nutr* 101(10):1493-1502. Very-low-carb vs high-carb weight-loss diets over 8 wk in adults with abdominal obesity (BMI 26-44; the parent cohort was 121): the low-carb diet reduced faecal output and frequency. **The size of the reduction in g/day was not obtained.**
+- Yancy WS, et al. 2004. *Ann Intern Med* 140:769-777. Ketogenic diet vs low-fat diet in overweight, hyperlipidaemic adults: constipation 68% vs 35%. n not confirmed.
+- Orsama AL, et al. 2014. *Obes Facts* 7(1):36; n=80, BMI 20-33.5. Turicchia et al. 2020, *PLoS One*, PMID 32353079, n=1,421. Both found weekly weight fluctuations of about 0.35%.
+
+## Disagreements between sources
+- **Colon content, standing:** Pritchard's fasting segment volumes add up to about 560 mL of total volume, which includes gas. Bendezú measured 480-620 mL of **non-gaseous** content. The two broadly agree, and both show that diet shifts the figure by 100-150 mL.
+- **Stool mass:** Cummings (106 g/day, UK), Rose (128 g/day, pooled) and Bendezú (145-223 mL/day, controlled diets) differ mainly because of fibre intake and method. They agree on a range of about 100-220 g/day.
+- **Transit:** whole-gut transit runs from 10 to 73 h (capsule), and Degen shows large test-retest variability within the same person. The "1-3 days" figure is defensible, but for any one person it is imprecise.
+- **Coach's "50-60% retention at 1 h":** this sits inside the normal band (37-90%), but the band is wide. The 60% figure is the *2-hour* upper limit.
+
+## Applying it to the subject
+Worked estimate for the subject weighing himself at 07:00 after a dinner at 20:00-21:00. Assume about 800 kcal of high-protein, low-carb food (~600 g) plus ~700 mL of fluid:
+- **Stomach at 07:00:** 10-11 h later, essentially empty. Allow 0-50 g for a large, fatty meal [likely].
+- **Fluid:** absorbed within hours. That mass now counts as body water or urine, **not gut content** (see the water topic).
+- **Dinner residue in the small bowel and colon:** the undigested part of a low-fibre meal is small. Right-colon content rises about 40 mL within 4 h of a meal (Bendezú). The added in-transit mass from last night's dinner is probably **~0.1-0.3 kg** [guessing].
+- **Standing colonic content:** about 0.5 kg, which is always there and not "extra". On his low-fibre diet it is probably near the low-residue value (~480 mL), so **~0.1-0.15 kg lower** than on a higher-fibre diet [likely]. That permanent reduction is a small part (≤0.2 kg) of his early reported loss, whether that loss is 9 kg or the ~6 kg his BMI change implies.
+- **Bowel-movement timing:** a single missed movement keeps about one day's stool (~100-150 g) on board. Constipation on low-carb could stack 2-3 days' worth, **~0.3-0.5 kg** [likely].
+- **Net:** morning-to-morning noise from gut contents alone is **about ±0.1-0.4 kg**, with occasional extremes of ~0.5-0.7 kg. For a ~100-107 kg man, the weekly weight cycle of ~0.35% (~0.35-0.4 kg) is of similar size and includes water. Gut contents cannot explain multi-kilogram changes.
+
+Confidence: medium, because the gastric, stool and colonic-content anchors agree across independent sources, but all data come from healthy and mostly lean volunteers, Bendezú is n=10, the "dinner residue" figure is my own inference, and no source page could be fetched directly for verification.
+
+
+==================================================================
+FILE: 04-protein-leverage-appetite.md
+==================================================================
+
+# Topic 4: Protein leverage and appetite suppression — does 2-3 days of high protein cause a low-intake day afterwards?
+
+> **Verification note (read first):** This session's network policy blocked every literature page (PubMed, PMC, Europe PMC, Wiley, PLOS, Crossref and others all returned EGRESS_BLOCKED). Each citation below was checked against search-engine result metadata: the title, journal, volume/pages, and the PMID or DOI shown in the indexed PubMed/journal URL, plus the abstract-level summary. No full text was read. Every number here should be read as **(abstract only, via search index)**. Anything I could not confirm even that far is marked **UNVERIFIED**.
+
+## Plain-language answer
+Three separate things are being run together here. (1) **Acute protein satiety** is real and well replicated. At ~25-30% of energy, protein reduces ad libitum intake on the same day and over weeks, and Weigle 2005 showed this with carbohydrate held at 50%, so no ketosis was involved [certain]. (2) **The protein leverage hypothesis (PLH)** says something else. Humans regulate absolute protein intake more tightly than energy, so a *low protein proportion* makes people overeat total energy. Its best-supported arm is the low-protein side [likely]. Whether intake falls *below* energy needs once the protein target is exceeded is contested: Gosby 2011 found no drop going from 15% to 25% protein, while Martens 2013/2014 found drops at 30% [likely contested]. (3) **A lagged, discrete "low day" after 2-3 high-protein days** is not a named or documented phenomenon. I found no study showing multi-day carryover of this kind. The main candidate mechanism, FGF21, is a signal of protein *deficit*, not protein excess [likely]. The subject also eats low-carb (~30-60 g/day), so mild ketosis is a live confound. Normal day-to-day intake varies with a CV of ~23-25%, and busy 12-hour workdays and missed meals add to that. So the coach's pattern is most likely **overfitting** [likely]. The protein is probably lowering his average intake, but it probably does not explain the particular low days.
+
+## The numbers
+| Quantity | Value | Source |
+|---|---|---|
+| Ad lib intake reduction, 30% vs 15% protein (carbs fixed 50%) | −441 ± 63 kcal/d; −4.9 kg over 12 wk | Weigle 2005 |
+| Energy intake, 10% vs 15% protein (4-day periods) | +12% on 10%; 15%→25% produced **no change** | Gosby 2011 |
+| Energy intake, 5/15/30% protein, 12 days (milk/plant) | 9.33 / 9.62 / **7.21** MJ/d | Martens 2013 |
+| Energy intake, 5/15/30% protein, 12 days (beef) | 9.48 / 9.30 / **8.73** MJ/d | Martens 2014 |
+| Meta-analysis, 38 ad lib trials, protein 8-54% energy | Consistent inverse relation of % protein to energy intake | Gosby 2014 |
+| HP ketogenic (4% CHO) vs HP moderate-CHO (35%), obese men | 7.25 vs 7.95 MJ/d (~−170 kcal/d, the ketogenic effect on top of protein) | Johnstone 2008 |
+| Protein dose reviewers associate with appetite benefit | 1.2-1.6 g/kg/d; ~25-30 g/meal | Leidy 2015 |
+| Within-person day-to-day CV of energy intake | mean ~23% (range 15-45%); ~25% (16-34%) | Tarasuk & Beaton 1991; Dietitian II 2013 |
+| Next-day negative autocorrelation of intake | Not found (positive lag-1 correlation); earlier negative findings attributed to a normalization artifact | Levitsky 2017 |
+
+## Insulin resistance / population caveat
+- **Almost every PLH trial used lean or normal-weight people.** Gosby 2011 (n=22) was lean. Martens 2013 had a mean BMI of 23.7, Martens 2014 24.4, and Weigle 2005 used healthy non-obese adults. The only obese-male trial here, Johnstone 2008, is a ketogenic comparison. None studied insulin-resistant men at a BMI of ~33-35.
+- **Most "high protein" arms kept carbohydrate moderate.** The subject's diet combines high protein with low carbohydrate, and it is closest to Johnstone 2008's ketogenic arm. There, cutting carbohydrate added a further ~0.7 MJ/d (~170 kcal) reduction beyond protein alone. On ~30-60 g carbohydrate/day, mild ketosis is plausible, particularly on low-intake days. **Ketosis therefore cannot be excluded as a confound.** Gibson 2015 found ketogenic low-carb diets modestly reduce hunger and desire to eat.
+- **The subject's per-kg intake is below the question's threshold.** Take ~107 kg (BMI 35 at an assumed 1.75 m). Then 150-180 g/day is **~1.4-1.7 g/kg of actual weight**, not >2 g/kg. It would exceed 2 g/kg only per kg of lean or ideal weight. As a share of energy it is high: ~600-720 kcal of ~2000-2100, or **~29-35% of energy**, which is the range where Martens saw reduced intake.
+- The FGF21 human data (Nicolaisen 2025) come from **lean** men on protein *restriction*. They say nothing direct about high intake in obesity.
+
+## Sources
+### 1. Weigle 2005 — acute and sustained protein satiety without carbohydrate restriction
+- **Citation:** Weigle DS et al., 2005, "A high-protein diet induces sustained reductions in appetite, ad libitum caloric intake, and body weight despite compensatory changes in diurnal plasma leptin and ghrelin concentrations," *Am J Clin Nutr* 82(1):41-48. https://ajcn.nutrition.org/article/S0002-9165(23)29507-6/fulltext (PMID not confirmed)
+- **Population:** n=19 healthy non-obese adults. Phases: 2 wk at 15% protein, 2 wk isocaloric at 30% protein, then 12 wk ad lib at 30%. Carbohydrate held at 50%.  **Mismatch vs subject:** not obese, not insulin-resistant, not low-carb.
+- **Finding / number:** spontaneous intake fell 441 ± 63 kcal/d; weight −4.9 kg, fat −3.7 kg. This isolates protein from carbohydrate restriction.
+- **Quality / limitations:** sequential rather than randomized design; small n; reports intake averages, not day-by-day lag.
+
+### 2. Gosby 2011 and 2014 — the PLH tests (proportion, and the asymmetry question)
+- **Citation:** Gosby AK et al., 2011, "Testing protein leverage in lean humans: a randomised controlled experimental study," *PLoS One* 6(10):e25929. DOI 10.1371/journal.pone.0025929, PMID 22022472. Gosby AK, Conigrave AD, Raubenheimer D, Simpson SJ, 2014, "Protein leverage and energy intake," *Obes Rev* 15:183-191. DOI 10.1111/obr.12131. Theory: Simpson & Raubenheimer 2005, *Obes Rev* 6:133-142, DOI 10.1111/j.1467-789X.2005.00178.x. Raubenheimer & Simpson 2019, "Protein leverage: theoretical foundations and ten points of clarification," *Obesity*, DOI 10.1002/oby.22531, PMID 31339001.
+- **Population:** 2011: n=22 lean adults, three 4-day in-house periods at 10/15/25% protein. 2014: 38 ad lib trials spanning 8-54% protein.  **Mismatch vs subject:** lean; short exposures; mostly not low-carb.
+- **Finding / number:** 10% protein gave +12% energy over 4 days, 70% of it from snacking. **Going from 15% to 25% gave no change.** The 2014 meta-analysis found an inverse relation between % protein and energy intake. The 2019 theory paper says strong protein regulation causes overconsumption on low-protein diets and *underconsumption* on high-protein diets, with protein prioritised over non-protein energy. The effect is framed as a within-diet, proportion-driven steady state, **not a lagged next-day response**. The geometric-framework term "rule of compromise" for intake beyond the target is **UNVERIFIED** here, because no page defining it could be fetched.
+- **Quality / limitations:** tightly controlled menus; short periods; the high-protein arm is where the evidence is weakest.
+
+### 3. Martens 2013/2014 — evidence for the high-protein arm
+- **Citation:** Martens EA, Lemmens SG, Westerterp-Plantenga MS, 2013, "Protein leverage affects energy intake of high-protein diets in humans," *Am J Clin Nutr* 97(1):86-93, PMID 23221572. Martens EA et al., 2014, "Protein leverage effects of beef protein on energy intake in humans," *Am J Clin Nutr* 99(6):1397-1406, PMID 24760974.
+- **Population:** 2013: n=79 (40 M/39 F), age 34 ± 18, BMI 23.7 ± 3.4. 2014: n=58, age 33 ± 16, BMI 24.4 ± 4.0. Both were 12-day randomized crossovers at 5/15/30% protein.  **Mismatch vs subject:** mostly normal weight; carbohydrate not restricted.
+- **Finding / number:** 30% protein lowered intake (7.21 vs 9.33-9.62 MJ/d in 2013; 8.73 vs 9.30-9.48 in 2014). There was **no leverage in the low-protein direction**. That is the opposite asymmetry to Gosby 2011, and "complete protein leverage did not occur."
+- **Quality / limitations:** 12-day averages, with no reported day-to-day oscillation.
+
+### 4. FGF21 — the protein-status hormone points the other way
+- **Citation:** Laeger T et al., 2014, "FGF21 is an endocrine signal of protein restriction," *J Clin Invest* 124:3913-3922, PMID 25133427. Hill CM et al., 2019, "FGF21 signals protein status to the brain and adaptively regulates food choice and metabolism," *Cell Rep*, DOI 10.1016/j.celrep.2019.05.022, PMID 31167139. Hill & Morrison 2019, *Obesity*, DOI 10.1002/oby.22568, PMID 31339002. Nicolaisen TS et al., 2025, *Nat Metab* 7:602-616, PMID 40050437.
+- **Population:** mostly rodents; humans in the 28-day low-protein arm (Laeger) and in lean men over 5 weeks (Nicolaisen).  **Mismatch vs subject:** complete. These are protein-*restriction* models.
+- **Finding / number:** FGF21 rises with **low** protein (hepatic Fgf21 up within 24 h; ~10-fold higher circulating levels in rodents) and drives protein-seeking. None of these studies shows an FGF21 or other protein-status signal causing a discrete low-intake day after protein excess.
+- **Quality / limitations:** strong mechanistic work, but it does not address the subject's question.
+
+**Supporting / conflicting:**
+- Johnstone AM et al. 2008, *AJCN* 87(1):44-55, PMID 18175736: 17 obese men; high-protein ketogenic vs high-protein moderate-carb, 7.25 vs 7.95 MJ/d. BMI not confirmed.
+- Veldhorst MA et al. 2010, *Br J Nutr* 104(9):1395-1405: carbohydrate absence and β-hydroxybutyrate contribute to high-protein appetite suppression.
+- Gibson AA et al. 2015, *Obes Rev* 16(1):64-76, PMID 25402637, DOI 10.1111/obr.12230: ketogenic low-carb diets gave less hunger and lower desire to eat. The changes were small, and their main benefit was preventing the rise in appetite that energy restriction usually brings.
+- Leidy HJ et al. 2015, *AJCN* 101(Suppl):1320S-9S.
+- Levitsky DA et al. 2017, *Appetite* 116:277-283.
+- Tarasuk V & Beaton GH 1991, *AJCN* 54:464-470, PMID 1877501. Beltsville study, n=29; up to 37% of within-person variance was patterned (for example weekly), not random.
+- Dietitian II Study 2013, PMID 24021734: healthy women, CV ~25%.
+- Johnstone AM, Stubbs RJ, Harbron CG 1996, *Eur J Clin Nutr* 50:418-430, PMID 8862477: one day of overfeeding with high-protein, high-carbohydrate or high-fat food. A secondary source reports that high protein gave more satiety but **no greater next-day intake reduction**. That detail is **UNVERIFIED** from the paper itself.
+- Lim JJ et al. 2022, PMC8838013 (journal not confirmed): 121 women with obesity (BMI 35.4). The planned protein and carbohydrate contrasts were not achieved in practice, and intake was similar between groups.
+
+## Disagreements between sources
+- **Which direction protein leverage works in.** Gosby 2011 found leverage on the low side only, with no effect from 15% to 25%. Martens 2013/2014 found it on the high side only, at 30% versus 5%, with no low-side effect. The 2019 theory paper claims both directions. Protocols differed (4 vs 12 days, menu design, protein source), and none of the trials was in obese or insulin-resistant people.
+- **Whether intake compensates from day to day.** de Castro's classic work describes 2-3-day lagged compensation. Secondary sources say other groups placed the lag at 3-5 days. Levitsky 2017 found no negative autocorrelation at all and attributes the earlier findings to a statistical artifact. I could not fetch de Castro's papers, so **the specific lags are UNVERIFIED**.
+- **How much of the high-protein effect is ketosis.** Weigle shows protein alone is enough. Johnstone 2008 and Veldhorst 2010 show ketosis adds to it. The two effects are additive, and in the subject they cannot be separated.
+
+## Applying it to the subject
+- **Mean and SD of his daily intake.** At ~2050 kcal/day and a CV of ~23-25%, one within-person SD is **~470-510 kcal**. A "very low" day of ~1300-1500 kcal is only about 1-1.5 SD below his mean. Under normal variation, roughly one day in 6-7 falls more than 1 SD low, which is about once a week, before counting 12-hour workdays and skipped meals.
+- **Why "after 2-3 high-protein days" is not a real test.** He eats ~150-180 g protein almost every day. So *every* low day follows 2-3 high-protein days by default. The pattern has no contrast condition, which makes it textbook selection or overfitting.
+- **Which confounds are live.** Mild ketosis (carbohydrate ~30-60 g, lower still on a missed-meal day) is one. Workload and meal skipping are another. Regression to the mean after higher-intake days is a third.
+- **What would test it.** Log intake daily for 4-6 weeks, including protein grams, carbohydrate grams, and a workday-intensity flag. Then check whether a low-intake day is predicted by protein from the previous 2-3 days *after* adjusting for workload. A cheap optional extra is urine ketone strips.
+- **What is reasonable to believe.** His ~30-35%-of-energy protein share plus low carbohydrate is probably suppressing his *average* intake by a few hundred kcal/day. That is consistent with Weigle, Martens and Johnstone [likely]. A specific lagged "protein rebound low day" is not supported [likely].
+
+Confidence: **medium**. The component findings are well established and consistent at abstract level: protein satiety, the PLH's proportion-based claim, and FGF21 as a low-protein signal. But no study directly tests multi-day carryover, the trial populations do not match the subject, and I could verify sources only from search-index abstracts, not full texts.
+
+
+==================================================================
+FILE: 05-body-composition-partitioning.md
+==================================================================
+
+# Topic 5: Body composition partitioning during aggressive deficit, high protein, no resistance training
+
+> **Verification note (read first):** The egress proxy blocked every literature host (PubMed, PMC, Wiley, Cambridge, AJCN, ScienceDirect, Semantic Scholar, Crossref, Europe PMC). No page could be fetched directly. Each citation below was checked against search-engine index results for the PubMed or journal page: title, journal, volume, PMID/DOI, and abstract-level numbers. They are marked **(search-index abstract; page not fetched)**. Anything I could not confirm that way is marked **UNVERIFIED**. The search budget ran out before I could confirm the remaining items.
+
+## Plain-language answer
+When overweight adults diet without resistance training, the lean ("fat-free") share of the weight they lose is not a fixed 25%. In the first weeks it is often about 50–60%, falling to about 25–35% by 6 months. What drives it: higher starting body fat lowers the lean share; men show a higher lean share than women; faster or more severe restriction raises it; a low-carb start raises it, mostly through glycogen-bound water. Higher protein (roughly >1.05–1.6 g/kg) reliably reduces lean loss by only about 0.4–0.6 kg compared with standard protein. That makes it *lean-sparing*, not *lean-building*. The well-known "lean gain in a deficit" result (Longland 2016) needed six days a week of resistance plus interval training. I found no evidence that high protein alone produces measurable lean gain during a large deficit, even in people starting above 30% body fat. A bicep circumference rise over one week with no training is most plausibly measurement error or fluid, not new muscle.
+
+## The numbers
+| Quantity | Value | Source | Tag |
+|---|---|---|---|
+| Popular rule: FFM share of weight lost | ~0.25 ("quarter rule") | Heymsfield 2014 | [certain] that it's the cited rule |
+| FFM share at week 4 (diet/VLCD, CALERIE-type data) | 0.60 ± 0.06 men; 0.50 ± 0.07 women | Heymsfield 2014 | [likely] |
+| FFM share at week 24 | ~0.35 ± 0.05 men; ~0.24 ± 0.03 women | Heymsfield 2014 | [likely] |
+| Lean share vs. starting fat | Inverse, curvilinear: fatter people lose proportionally less lean | Forbes 2000; Hall 2007 | [certain] |
+| Extra FFM kept on high vs. standard protein (1.07–1.60 vs 0.55–0.88 g/kg; 24 RCTs, n=1,063, ~12 wk) | +0.43 kg FFM; −0.87 kg fat; −0.79 kg weight | Wycherley 2012 | [likely] |
+| Extra FFM kept with protein >1.05 g/kg (87 studies) | +0.60 kg | Krieger 2006 | [likely] |
+| Low-carb (≤35–41% energy) vs higher-carb | 0.69 kg *greater* measured FFM loss | Krieger 2006 | [likely]; probably largely water/glycogen [likely] |
+| Rapid (VLCD 500 kcal, 5 wk, −9.0 kg) vs slow (1,250 kcal, 12 wk, −8.2 kg) | "% FFM loss" 8.8% vs 1.3% (P=0.034) | Vink 2016 | [likely]; denominator unclear |
+| Gradual vs rapid, meta-analysis (7 studies) | FFM: no significant difference; gradual lost 1 kg more fat (95% CI −1.70 to −0.29) | Ashtary-Larky 2020 | [likely] |
+| Lean *gain* in deficit with 2.4 g/kg **plus** RT+HIIT 6 d/wk (40% deficit, 4 wk) | +1.2 kg LBM (vs +0.1 kg at 1.2 g/kg) | Longland 2016 | [certain] that training was included |
+| Glycogen hydration | 3–4 g water per g glycogen | Kreitzman 1992 | [likely] |
+| Circumference tape error (children, trained staff) | intra-observer TEM 0.09–1.24 cm; inter-observer 0.18–1.01 cm | Int J Obes 2011 (PMID 21483422) | [likely]; adult figures not retrieved |
+
+## Insulin resistance / population caveat
+- **Low-carb confound:** Krieger's meta-regression and Hall's ketogenic metabolic-ward study both found *more* measured FFM loss on low-carb or ketogenic diets. Glycogen is stored with 3–4 parts water (Kreitzman 1992), and DXA and BIA count that water as "lean". So on this subject's diet (~30–60 g carb/day), early apparent lean loss is inflated by water, not muscle protein [likely]. The opposite also holds: any carb refeed will show as a "lean gain".
+- **Insulin resistance itself:** I found no fetched source on whether insulin resistance changes the lean fraction during a deficit. The idea of "anabolic resistance" in obesity is plausible but **UNVERIFIED** here.
+- **Protein studies are mostly short, supervised trials** in young, often normal-weight or active adults (Pasiakos, Longland) or adults over 50 (Kim). None matches a 32-year-old Class II obese, insulin-resistant man on a self-directed plan.
+- **Sex:** Heymsfield's data give men a *higher* early lean fraction than women, which is unfavourable for this male subject.
+
+## Sources
+### 1. Heymsfield et al. 2014 – "quarter FFM rule" critique
+- **Citation:** Heymsfield SB, Gonzalez MC, Shen W, Redman L, Thomas D. 2014. Weight loss composition is one-fourth fat-free mass: a critical review and critique of this widely cited rule. *Obes Rev* 15(4):310–321. DOI 10.1111/obr.12143; PMID 24447775. https://pubmed.ncbi.nlm.nih.gov/24447775/ (search-index abstract; page not fetched)
+- **Population:** Review of hypocaloric diet and exercise studies, including CALERIE and VLCD trials; mixed sexes and adiposity. **Mismatch vs subject:** Mostly supervised trials, not low-carb; applies directly to diet-only loss.
+- **Finding / number:** The FFM share is time-dependent: 0.60 (men) and 0.50 (women) at week 4, falling to about 0.35 and 0.24 at week 24. The 0.25 rule describes longer-term loss, not the early weeks.
+- **Quality / limitations:** Authoritative review. The week-by-week numbers come from index text of the full article, not a fetched page.
+
+### 2. Forbes 2000 / Hall 2007 – starting fat sets the lean share
+- **Citation:** Forbes GB. 2000. Body fat content influences the body composition response to nutrition and exercise. *Ann N Y Acad Sci* 904:359–365. DOI 10.1111/j.1749-6632.2000.tb06482.x; PMID 10865771. Hall KD. 2007. Body fat and fat-free mass inter-relationships: Forbes's theory revisited. *Br J Nutr* 97(6):1059–1063. PMID 17367567. https://pubmed.ncbi.nlm.nih.gov/17367567/ (both search-index abstract; pages not fetched)
+- **Population:** Pooled human data plus a mathematical model. **Mismatch vs subject:** Forbes's curve was built largely from women's data; it is a population model, not an individual prediction.
+- **Finding / number:** Forbes found an inverse, curvilinear relationship between starting body fat and the lean share of weight lost. In overfeeding, weight gained is 60–70% lean in thin people but 30–40% in obese people. Hall extended the equation to large weight changes: the lean share depends on starting composition *and* on the size and direction of the change. The commonly quoted form, ΔFFM/ΔW ≈ 10.4/(10.4 + fat mass in kg), is from memory and **UNVERIFIED**.
+- **Quality / limitations:** Standing theoretical reference. It says nothing about protein, rate of loss or diet type.
+
+### 3. Wycherley et al. 2012 and Krieger et al. 2006 – what protein buys
+- **Citation:** Wycherley TP, Moran LJ, Clifton PM, Noakes M, Brinkworth GD. 2012. Effects of energy-restricted high-protein, low-fat compared with standard-protein, low-fat diets: a meta-analysis of randomized controlled trials. *Am J Clin Nutr* 96(6):1281–1298. PMID 23097268. https://pubmed.ncbi.nlm.nih.gov/23097268/ — Krieger JW, Sitren HS, Daniels MJ, Langkamp-Henken B. 2006. Effects of variation in protein and carbohydrate intake on body mass and composition during energy restriction: a meta-regression. *Am J Clin Nutr* 83(2):260–274. PMID 16469983. https://pubmed.ncbi.nlm.nih.gov/16469983/ (both search-index abstract; pages not fetched)
+- **Population:** Wycherley: 24 RCTs, n=1,063 overweight or obese adults, 12.1 ± 9.3 wk. Krieger: 87 studies, 165 groups, adults ≥19 y, intake ≥1,000 kcal/day, ≥4 wk. **Mismatch vs subject:** Wycherley covers low-fat diets, not low-carb, and its "high" protein arm (1.07–1.60 g/kg) sits at or below the subject's intake. Deficits were mostly moderate.
+- **Finding / number:** Wycherley: high protein kept 0.43 kg more FFM and lost 0.87 kg more fat. Krieger: protein >1.05 g/kg kept 0.60 kg more FFM; low-carb diets showed 0.69 kg *more* FFM loss. Krieger's resistance-training effect size was not confirmed and is omitted.
+- **Quality / limitations:** Meta-analyses of heterogeneous, short trials. The effect is sub-kilogram and still means net lean *loss*, just less of it. The 95% CIs were not retrieved.
+
+### 4. Longland et al. 2016 – the "lean gain in a deficit" study (training included)
+- **Citation:** Longland TM, Oikawa SY, Mitchell CJ, Devries MC, Phillips SM. 2016. Higher compared with lower dietary protein during an energy deficit combined with intense exercise promotes greater lean mass gain and fat mass loss: a randomized trial. *Am J Clin Nutr* 103(3):738–746. DOI 10.3945/ajcn.115.119339; PMID 26817506. (search-index abstract; page not fetched; volume, pages and author list beyond Longland/Phillips are **UNVERIFIED**)
+- **Population:** 40 young men, overweight/recreationally active. **Mismatch vs subject:** Large. They trained 6 d/wk (full-body RT plus HIIT) under supervision, with food provided.
+- **Finding / number:** On a 40% deficit for 4 wk, the 2.4 g/kg group gained +1.2 kg LBM and lost −4.8 kg fat; the 1.2 g/kg group gained +0.1 kg LBM and lost −3.5 kg fat.
+- **Quality / limitations:** Well controlled but short. It is **not** evidence for protein alone.
+
+**Supporting / conflicting sources (all search-index; pages not fetched):**
+- *Vink et al. 2016*, *Obesity*, DOI 10.1002/oby.21346, PMID 26813524. n=57, BMI 28–35. A 500 kcal VLCD for 5 wk (−9.0 kg) caused much more FFM loss than a 1,250 kcal diet for 12 wk (−8.2 kg): 8.8% vs 1.3%. It is unclear whether the denominator is baseline FFM or weight lost.
+- *Ashtary-Larky et al. 2020*, *Br J Nutr* 124(11). Meta-analysis of 7 studies: FFM did not differ between rapid and gradual loss; gradual loss removed 1 kg more fat and better preserved RMR.
+- *Pasiakos et al. 2013*, *FASEB J* 27:3837–3847, DOI 10.1096/fj.13-230227, PMID 23739654. n=39, 21 d at a 40% deficit. Protein at 1.6 or 2.4 g/kg (vs 0.8) gave a lower FFM share of weight lost; 2.4 added no benefit over 1.6. Population details and the exercise component are **UNVERIFIED**; exact percentages were not retrieved.
+- *Kim et al. 2016*, *Nutr Rev* 74(3):210–224, PMID 26883880. 20 RCTs, adults >50 y: higher protein kept more lean mass and lost more fat. The commonly quoted "+0.60 kg lean" figure is **UNVERIFIED**.
+- *Hall et al. 2016*, *Am J Clin Nutr* 104(2):324–333, DOI 10.3945/ajcn.116.133561, PMID 27385608. 17 overweight/obese men on a metabolic ward: switching to a ketogenic diet slowed fat loss and coincided with FFM loss on DXA.
+- *Garthe et al. 2011*, *IJSNEM* 21(2):97–104, PMID 21558571. Elite athletes doing 4 RT sessions/wk: losing 0.7% BW/wk gave +2.1% LBM and −31% fat; losing 1.4%/wk gave −21% fat.
+- *Kreitzman et al. 1992*, *Am J Clin Nutr* 56(1 Suppl):292S, PMID 1615908. Glycogen is stored with 3–4 parts water; glycogen shifts distort body-composition estimates.
+- *Tinsley & Willoughby 2016*, *IJSNEM* 26(1):78–92. Early ketogenic-diet weight loss is glycogen and water.
+- *Hector & Phillips 2018*, *IJSNEM* 28(2):170–177, DOI 10.1123/ijsnem.2017-0273, PMID 29182451. Recommends 1.6–2.4 g/kg for athletes in a deficit, with training.
+- *Ulijaszek & Kerr 1999*, *Br J Nutr* 82(3):165–177, PMID 10655963. Circumferences are less precise than weight or height, and one observer should take them. The paper's arm-specific TEM was not retrieved.
+
+## Disagreements between sources
+- **Rate of loss:** Vink 2016 found much higher FFM loss with rapid loss; the Ashtary-Larky 2020 meta-analysis found no significant FFM difference, only less fat lost. Garthe found the rate mattered even with training. Likely explanations: method (water-sensitive measures), whether a weight-stable period came before measurement, and VLCD severity.
+- **"25%" vs. "50–60%":** These are not in conflict. They describe different time points (Heymsfield 2014). People who quote 25% for a 5-week result are applying the wrong time scale.
+- **Low-carb and FFM:** Krieger and Hall show more *measured* FFM loss on low-carb or ketogenic diets. Tinsley and Kreitzman argue much of it is water. Neither side cleanly separates water from muscle protein.
+
+## Applying it to the subject
+Assume height about 1.78 m [guessing]. BMI 35→33 then corresponds to about 6.3 kg, not 9 kg. Energy balance favours the smaller figure: intake ~2,050 kcal against a TDEE of roughly 3,000–3,300 kcal [guessing] is a deficit of about 1,000–1,200 kcal/day, or 35,000–42,000 kcal over 5 weeks. That is about 4.5–5.5 kg of fat tissue at most [likely].
+
+Worked split of the claimed 9 kg:
+- Glycogen plus bound water from going low-carb: ~1.5–2.5 kg (glycogen stores ~400–500 g, **UNVERIFIED**, × 3–4 water).
+- Fat: ~4.5–5.5 kg.
+- Remaining ~1–3 kg: other water or true FFM.
+
+On DXA or BIA the "lean" share of the loss could show as 35–55%, matching Heymsfield's week-4 values. The true muscle-protein share is probably much smaller [guessing].
+
+High protein here (~1.4–1.7 g/kg of actual body weight) probably saved a few hundred grams of lean mass compared with standard protein [likely]. It did **not** build muscle [likely].
+
+**Bicep:** Losing fat should *shrink* arm girth. A one-week increase is best explained by:
+- tape error, which is about ±0.5–1 cm even for trained measurers [likely];
+- differences in tape position or tension, flexed vs relaxed arm, or time of day;
+- fluid shifts, including carb or salt intake.
+
+It is not evidence of recomposition [likely]. To test it: take three measurements, relaxed arm, at a marked mid-point, same time of day, and track the 2–4-week trend.
+
+Confidence: **medium**, because the direction (protein spares lean mass but does not build it; the lean share is high early and on low-carb) is consistent across sources. But every citation was checked only through search-index abstracts, several specific numbers are **UNVERIFIED**, and no study matches an untrained, insulin-resistant, low-carb Class II obese man.
+
+
+==================================================================
+FILE: 06-homa-ir-improvement-timeline.md
+==================================================================
+
+# Topic 6: HOMA-IR improvement timeline with weight loss alone (no resistance training)
+
+> **Verification note:** The egress proxy blocked direct page fetches from PubMed, PMC, journal sites and Europe PMC (403 policy denial). I checked every citation below against the text of its PubMed or journal page as returned by web search, so each is marked **(search-snippet/abstract only)**. I never read full texts. Anything I could not confirm is labelled **UNVERIFIED**.
+
+## Plain-language answer
+The fasting measures (fasting insulin, and HOMA-IR, which mostly reflects the liver) improve quickly once someone is in a calorie deficit. The liver responds within 48 hours to 7 days, before much weight is gone. After that, the improvement tracks how much weight is lost. The best per-kg figure I found is about **0.15 HOMA-IR units per kg lost** (roughly 6.5 kg per 1 point). A large 8-week trial found about **−1.4 units after ~11% weight loss**. For someone starting at 3.58, that means a fall of about 30–40% after 6–10 kg of loss, giving a true value of roughly **2.0–2.7** at 12 weeks. A very-low-carb diet probably pushes fasting insulin a bit lower than weight loss alone would. However, HOMA-IR varies about 27% within the same person from week to week. A single retest could therefore read anywhere from about 1.5 to 3.2 even if the improvement is real. Only a drop of more than about 47–52% counts as proven change from one pair of measurements.
+
+## The numbers
+
+| Quantity | Value | Source |
+|---|---|---|
+| Weight loss needed to lower HOMA-IR by 1 point | **6.5 kg** (adjusted for baseline); 2.9 kg per 1 µU/mL fasting insulin | EJCN 2016/17, n=50 |
+| HOMA-IR change after an 8-week low-energy diet with ~11% weight loss | **−1.4** (men −1.50, women −1.35) | PREVIEW, n=2,224 |
+| Dose-response, measured by clamp | Liver and adipose insulin sensitivity largely improved by ~5% loss (claimed to plateau at ~5–8%); muscle keeps improving to 16% | Magkos 2016 |
+| Time for hepatic insulin sensitivity to respond | **48 h** of calorie restriction (Kirk); **7 days** of 600 kcal/d normalised fasting glucose (9.2→5.9 mmol/L) with liver fat −30% (Lim) | Kirk 2009; Lim 2011 |
+| Low-carb vs higher-carb diet (same deficit, 48 h) | Liver fat −~30% vs −~10%; hepatic insulin sensitivity gain ~3× greater | Kirk 2009 |
+| Keto vs Mediterranean vs low-fat diet at matched ~10% loss | 24-h insulin −74% / −44% / −27%; hepatic insulin sensitivity gain 2–3× greater on keto; muscle insulin sensitivity +~50% on all three | Cell Metab 2026 |
+| Within-person day-to-day variation in HOMA-IR | **26.7%** (95% CI 25.5–28.3), driven mainly by insulin | EuBIVAS 2024 |
+| Change needed to exceed noise on one pair of tests | Fall of >~47–52%, or rise of >~90–110% | Jayagopal 2002 (UNVERIFIED figure); my calculation from 26.7% |
+| Differences between insulin assays (lab-to-lab) | Median 24% (range 12–66%) | ADA insulin standardisation work (Miller 2009) |
+
+## Insulin resistance / population caveat
+- **Most of the rapid-reversal data come from people with type 2 diabetes** (Lim, Petersen, DiRECT, Goldenberg). Their hepatic insulin resistance and liver fat start much higher, so they improve more in absolute terms. The subject's HOMA-IR of 3.58 is insulin-resistant but his glycaemic status is unknown. Prediabetes data (PREVIEW, Cell Metab 2026) and obese non-diabetic data (Magkos, EJCN) match him better. [likely]
+- **HOMA-IR mostly measures hepatic, fasting insulin resistance.** It does not capture muscle insulin sensitivity. Muscle is where the lack of resistance training matters: in Beals 2023, diet plus exercise gave about 2× the whole-body (mainly muscle) insulin-sensitivity gain of diet alone at matched 10% loss. So skipping training probably costs less on HOMA-IR than on clamp or OGTT measures. [likely]
+- **Very-low-carb diets affect the two inputs in different ways.** They lower fasting insulin partly through carbohydrate restriction itself, not only weight loss (Kirk; Cell Metab 2026). They may also slightly raise fasting glucose through reduced glucose uptake in muscle, or "glucose sparing". In Bisschop 2001, a eucaloric high-fat, low-carb diet in healthy men reduced insulin's ability to suppress liver glucose output. Because HOMA-IR = glucose (mmol/L) × insulin (µU/mL) / 22.5, a lower insulin and a higher glucose can partly cancel out. The effect on glucose is supported mechanistically. I found no verified size for it in obese insulin-resistant adults. [guessing on size]
+- **Active energy deficit versus weight-stable state:** Kirk showed that 48 h of restriction improves hepatic insulin sensitivity before meaningful weight loss. A retest taken during an active deficit therefore includes a "deficit effect" that may partly fade at maintenance. [likely]
+- **Population mismatch:** most participants were middle-aged (44–50), and many trials were mostly women. The subject is a 32-year-old man. Lim 2011 was 9/11 male. [certain]
+
+## Sources
+
+### 1. Body-composition MRI regression (EJCN)
+- **Citation:** Authors not captured (UNVERIFIED). Impact of weight loss-associated changes in detailed body composition as assessed by whole-body MRI on plasma insulin levels and homeostatis model assessment index. *Eur J Clin Nutr* 2016/17. PMID 27759067; https://pubmed.ncbi.nlm.nih.gov/27759067/ (search-snippet/abstract only)
+- **Population:** n=50, age 20–69, BMI 21.6–54.4; low-calorie diet or bariatric surgery; mean loss −16.0±13.6 kg. **Mismatch vs subject:** includes surgical patients and very large losses; sex split not seen.
+- **Finding / number:** 6.5 kg lost per 1-point fall in baseline-adjusted HOMA; 2.9 kg per 1 µU/mL fasting insulin. Liver-fat change explained 55.1% of the variance in HOMA change.
+- **Quality / limitations:** small and mixed-intervention; a linear fit across very different losses; not a meta-analysis.
+
+### 2. PREVIEW 8-week low-energy diet
+- **Citation:** Christensen P, et al. 2018. Men and women respond differently to rapid weight loss: metabolic outcomes of a multi-centre intervention study after a low-energy diet in 2500 overweight, individuals with pre-diabetes (PREVIEW). *Diabetes Obes Metab.* DOI 10.1111/dom.13466; PMID 30088336; https://pubmed.ncbi.nlm.nih.gov/30088336/ (abstract only)
+- **Population:** n=2,224 (1,504 women, 720 men), overweight with prediabetes; 90.8% completed. **Mismatch vs subject:** used meal replacements (~800 kcal/d, a detail from memory and UNVERIFIED), not a low-carb diet eaten ad lib at ~2,000 kcal; baseline HOMA-IR not captured.
+- **Finding / number:** weight loss 11.8% in men and 10.3% in women; HOMA-IR fell 1.50±0.15 in men and 1.35±0.15 in women; 35% returned to normal glucose.
+- **Quality / limitations:** very large, but single-arm with no control; a faster, deeper deficit than the subject's.
+
+### 3. Magkos 2016 dose-response
+- **Citation:** Magkos F, Fraterrigo G, Yoshino J, et al. 2016. Effects of moderate and subsequent progressive weight loss on metabolic function and adipose tissue biology in humans with obesity. *Cell Metab* 23(4):591–601. DOI 10.1016/j.cmet.2016.02.005; PMID 26916363 (abstract only)
+- **Population:** 40 sedentary men and women, 44±12 y, BMI 37.9±4.3, insulin-resistant by HOMA and clamp. **Mismatch vs subject:** older; not low-carb.
+- **Finding / number:** weight loss of 5.1% (n=19), 10.8% (n=9) or 16.4% (n=9) vs maintenance (n=14). A 5% loss improved liver, adipose and muscle insulin sensitivity and β-cell function. Further loss mainly added muscle insulin sensitivity. The claim that liver and adipose sensitivity plateau at ~5–8% loss surfaced in search text and may come from the authors' discussion or a later Klein review [likely]. I did not capture per-tissue % changes.
+- **Quality / limitations:** gold-standard clamp with tracers; very small higher-loss arms.
+
+### 4. EuBIVAS biological variation
+- **Citation:** The biological variation of insulin resistance markers: data from the European Biological Variation Study (EuBIVAS). *Clin Chem Lab Med* 2024. DOI 10.1515/cclm-2024-0672 (abstract only; authors not captured)
+- **Population:** 90 non-diabetic adults (52 women, 38 men) from 5 countries, 10 weekly fasting samples. **Mismatch vs subject:** mostly not insulin-resistant; variation is probably larger in insulin-resistant people (Jayagopal 2002).
+- **Finding / number:** within-person variation of HOMA-IR 26.7% (95% CI 25.5–28.3), driven mainly by insulin; QUICKI 4.1%.
+- **Quality / limitations:** strong design for this purpose; covers biological variation only, not differences between labs.
+
+### Supporting / conflicting sources
+- **Kirk E, Reeds DN, Finck BN, Mayurranjan SM, Patterson BW, Klein S.** 2009. *Gastroenterology* 136(5):1552–60. DOI 10.1053/j.gastro.2009.01.048; PMID 19208352 (abstract only). n=22 obese adults, BMI 36.5. Randomised to >180 g/d or <50 g/d carbohydrate in a deficit. At 48 h the low-carb group lost ~30% of liver fat vs ~10%, with a ~3× greater hepatic insulin-sensitivity gain. After ~11 weeks (7% loss), muscle insulin sensitivity improved similarly in both groups.
+- **Lim EL, Hollingsworth KG, … Taylor R.** 2011. *Diabetologia* 54(10):2506–14. DOI 10.1007/s00125-011-2204-7; PMC3168743 (abstract only). n=11 with type 2 diabetes (9 men), BMI 33.6, 600 kcal/d. By day 7, fasting glucose went from 9.2 to 5.9 mmol/L and liver fat fell 30%.
+- **Petersen KF, Dufour S, Befroy D, Lehrke M, Hendler RE, Shulman GI.** 2005. *Diabetes* 54(3):603–08 (title and journal only). Moderate weight reduction reversed fatty liver and hepatic insulin resistance in type 2 diabetes. The often-quoted "~8 kg loss, ~81% fall in liver fat" is **UNVERIFIED**.
+- **Taylor R, et al.** 2018 (DiRECT). *Cell Metab.* PMID 30078554 (abstract only). Liver fat fell from 16.0% to 3.1% after >10 kg loss in type 2 diabetes.
+- **Very-low-carb vs Mediterranean vs low-fat trial.** 2026. *Cell Metab.* DOI 10.1016/j.cmet.2026.07.020; PMID 42660124 (abstract and news coverage only). 55 randomised, 42 completed, all with prediabetes and fatty liver. Numbers are in the table above. Liver fat fell 67% on keto vs 45% on the other diets.
+- **Beals JW, … Klein S.** 2023. *Nat Metab* 5(7):1221–35; PMID 37365374 (abstract only). At matched 10% loss, whole-body insulin sensitivity rose about 2× more with diet plus exercise than with diet alone.
+- **Jayagopal V, et al.** 2002. *Diabetes Care* 25(11):2022–25; PMID 12401750. HOMA-IR is larger and varies more in type 2 diabetes. The ">90% rise / >47% fall" threshold appeared in search text but not in the abstract I saw: **UNVERIFIED**.
+- **Wallace TM, Levy JC, Matthews DR.** 2004. Use and abuse of HOMA modeling. *Diabetes Care* 27(6):1487–95. DOI 10.2337/diacare.27.6.1487 (title only). Advises averaging insulin from 3 samples; the reported repeatability of 10.3% for 1 sample vs 5.8% for 3 is [likely] from this paper.
+- **Matthews DR, et al.** 1985. *Diabetologia* 28:412–19. DOI 10.1007/BF00280883. The original paper; HOMA-IR = FPI × FPG / 22.5.
+- **Miller WG, et al.** 2009. Toward standardization of insulin immunoassays. *Clin Chem* 55(5):1011–18; PMID 19325009 (abstract only). Tested 10 commercial assays on 39 sera. The 12–66% difference between assays is the pre-harmonisation context.
+- **Bisschop PH, et al.** 2001. *Am J Clin Nutr* 73:554–59; PMID 11237931 (abstract only). In healthy men, a eucaloric high-fat, low-carb diet reduced insulin's suppression of liver glucose output.
+- **Goldenberg JZ, et al.** 2021. *BMJ*, low-carb diets and remission of type 2 diabetes (abstract only; DOI not captured). At 6 months the insulin-sensitivity mean difference was −0.14 (95% CI −0.51 to 0.23), which is not significant, and gains faded by 12 months. **Sainsbury E, et al.** 2018. *Diabetes Res Clin Pract*: larger HbA1c benefit at 3–6 months with <26% energy from carbohydrate. Both studied people with diabetes and gave no HOMA-per-kg figure.
+- **Hamman RF, et al.** 2006 (DPP). *Diabetes Care* 29(9):2102. Diabetes risk fell 16% per kg lost and estimated insulin sensitivity improved. I captured no HOMA-per-kg figure. **Look AHEAD:** I did not verify any HOMA-per-kg figure.
+
+## Disagreements between sources
+- **Linear per-kg vs early plateau.** The EJCN regression treats HOMA change as linear in kg lost. Magkos suggests liver and adipose gains are mostly done by ~5–8% loss. That would put most of the subject's HOMA-IR benefit in the first ~5–9 kg, with less per kg afterwards. I have not resolved this; I treat 0.15/kg as a rough figure for the first ~10 kg only. [likely]
+- **Low-carb advantage.** Kirk (48 h) and Cell Metab 2026 (at 10% loss) show a clear hepatic and insulin advantage for very-low-carb diets. Goldenberg's meta-analysis in type 2 diabetes found no significant insulin-sensitivity difference, and benefits faded by 12 months. The short-term fasting-insulin advantage looks real, but its lasting size is unclear. [likely]
+- **Fasting glucose on low-carb.** Very-low-carb diets lowered 24-h glucose by 20% vs 8% (Cell Metab 2026). The "physiological insulin resistance" idea predicts slightly higher morning glucose, but the evidence for it in obese insulin-resistant adults is mechanistic and partly from blogs. [guessing]
+
+## Applying it to the subject
+**The amount of weight lost is uncertain.** He reports 9 kg. BMI going from 35 to 33 at typical height implies about 6 kg (on ~105–110 kg, roughly 5.5–8.5%). The table works through both, plus a possible 12 kg by week 12.
+
+| Loss by retest | Per-kg estimate (−0.15/kg) | Expected true HOMA-IR | Plausible single-test reading (±~27% within-person variation) |
+|---|---|---|---|
+| 6 kg | −0.9 | **~2.7** | ~2.0–3.4 |
+| 9 kg | −1.4 (matches PREVIEW at ~11%) | **~2.2** | ~1.6–2.9 |
+| 12 kg | −1.8 (possibly less if the plateau applies) | **~1.8–2.2** | ~1.3–2.8 |
+
+- **Honest headline:** expect about 3.58 → **2.0–2.7**, roughly a 25–45% fall. Most of the hepatic part should already be in place in the first 2–5 weeks. [likely] A very-low-carb diet may push fasting insulin lower than this, but a small rise in fasting glucose could offset part of it. [guessing]
+- **What the retest can and cannot prove:** with ~27% variation, a single pair of results proves real change only if the retest is ≤ ~1.7–1.9, which is a fall of more than ~47–52%. A reading of 2.3–2.8 is **consistent with improvement but not proof of it**. It is not a failure. [likely]
+- **Retest protocol:**
+  - Same lab and same insulin assay (assays can differ by around 24%).
+  - Same fasting length (10–12 h), same time of morning, no hard exercise the day before.
+  - Same diet state as the baseline test, with no carb refeed or cheat day in the preceding 2–3 days.
+  - Ideally 2–3 draws, or at least fasting insulin and glucose reported separately, so a change in glucose alone can be seen.
+  - Note whether the baseline test was taken on his old higher-carb diet. If so, part of any drop reflects the change in diet, not only improved insulin sensitivity.
+  - A test taken during an active deficit will look better than one taken at maintenance.
+
+Confidence: **low–medium**. The direction and speed (days to weeks, front-loaded) are well supported. The per-kg size rests on one small regression and one uncontrolled trial. Within-person variation (~27%) is about as large as the effect being measured. The amount he has actually lost is uncertain. Page fetches were blocked, so every citation was checked from search text only.
+
+
+==================================================================
+FILE: 07-movement-for-time-constrained-beginner.md
+==================================================================
+
+# Topic 7: Best movement combination for a time-constrained beginner
+
+> **Verification note:** Direct fetches of PubMed, PMC, Wiley, Springer and journal pages were blocked by this session's network egress policy. Every number below comes from a search-engine-indexed abstract or record of the named paper (so all of it is "(abstract only)"). Items marked UNVERIFIED were not confirmed in any retrieved text.
+
+## Plain-language answer
+During a diet, resistance training (RT) is the only exercise shown to reliably protect lean mass. In dieting obese older adults, RT prevented about 0.8 kg (≈93%) of the lean mass that diet alone lost. Walking and aerobic work do not do this, and in one trial they made lean-mass loss worse. The RT dose that works is small. When weekly volume is held equal, training a muscle once, twice or three times a week gives similar growth, so a short session at home counts. Walking is the easier habit to keep. More steps are linked to lower mortality, with benefit levelling off at about 8,000–10,000 steps/day under age 60. Short walks after meals lower glucose after eating, but mostly after carb-heavy meals, and this subject eats very little carbohydrate. The adherence evidence decides the plan. About half of people drop out of structured programmes within 6 months. Lifestyle activity worked as well as a gym prescription over 24 months. Step tracking with a goal adds about 2,500 steps/day. Habits form slowly (median 66 days) and survive a missed day. **Recommendation:** in month one, make home RT the one fixed commitment, done as short daily "snacks" or 2 × ~20-min sessions. Treat walking as a step target filled in around the day, not as a scheduled session. [likely]
+
+## The numbers
+| Question | Number | Source | Tag |
+|---|---|---|---|
+| Steps where mortality benefit plateaus, age <60 | ~8,000–10,000/day (≥60 y: 6,000–8,000) | Paluch 2022 | [certain] for association, [guessing] that it's causal |
+| First significant mortality benefit / peak | 2,517 steps/day (HR 0.92) / peak ~8,763 (−60%) | Stens 2023 | [likely] |
+| 8,000 vs 4,000 steps/day, mortality | HR 0.49 (0.44–0.55) | Saint-Maurice 2020 | [likely] |
+| Pedometer + goal, added steps | +2,491/day (95% CI 1,098–3,885); BMI −0.38 | Bravata 2007 | [likely] |
+| RT during caloric restriction, lean mass spared | 0.819 kg (0.364–1.273); 93.5% of CR-induced loss | Sardeli 2018 | [certain] in older obese; [likely] for subject |
+| Lean mass change in 26 wk of diet + exercise | aerobic −5%, RT −2%, combined −3% | Villareal 2017 | [certain] in older obese |
+| Lean mass at 18 mo | WL −1.0 kg; WL+aerobic −1.6 kg; WL+RT −0.8 kg | Beavers 2017 | [likely] |
+| RT effect on HOMA-IR, overweight/obese non-diabetic | −1.05 (−1.33 to −0.76) | 2023 meta (PMID 37331899) | [likely] |
+| Hypertrophy, volume-equated frequency | no significant difference 1× vs 2× vs 3×/wk | Schoenfeld 2016/2019 | [likely] |
+| Post-meal 10-min walks vs one 30-min walk (T2D) | postprandial glucose −12%; −22% after evening meal | Reynolds 2016 | [likely] |
+| Dropout from supervised exercise | ~50% within 6 months | Dishman 1988 (secondary citation) | [likely] |
+| Habit automaticity | median 66 days (range 18–254); exercise ~1.5× longer than eating/drinking habits | Lally 2010 | [likely] |
+| Gym habit threshold | ≥4 bouts/week for 6 weeks | Kaushal & Rhodes 2015 | [guessing] as general rule |
+| Implementation intentions effect | d = 0.31 post, 0.24 follow-up | Bélanger-Gravel 2013 | [likely] |
+
+## Insulin resistance / population caveat
+- **Lean-mass trials are in older adults.** Sardeli (six RCTs), Villareal and Beavers (mean age ~67) all studied people aged about 65–70. Those people start with less muscle and build it more slowly than a 32-year-old man. The subject's 150–180 g/day of protein also protects lean mass better than the ~15%-protein diets in the Sardeli trials. So the *absolute* lean-mass loss that RT prevents is probably smaller for him. That RT beats walking for lean mass is still very likely true. [likely]
+- **Post-meal walking works less on a low-carb diet.** The glucose benefit depends on how high glucose rises after a meal. Reynolds found the biggest effect after carb-heavy evening meals in T2D. At 30–60 g carbohydrate a day, the subject's glucose rises little after meals, so there is less for walking to lower. The case for walking here rests on total activity and insulin sensitivity, not on glucose after meals. [likely]
+- **The RT–insulin-resistance meta-analysis may have a reporting error.** Its fasting-insulin result is given as "−1.03 (95% CI −1.03, −0.75)", with the point estimate sitting on one end of the interval. The HOMA-IR result looks internally consistent. I could not check its units or which studies it included. The subject's HOMA-IR of 3.58 is in the range where a −1 change would matter.
+- **Weight-loss discrepancy.** A reported 9 kg in 5 weeks, compared with the ~6 kg implied by the BMI change, fits with early low-carb loss being partly glycogen and water. DXA counts water as lean mass, so early "lean loss" readings on this diet will look worse than the true loss of muscle.
+- **Adherence studies are mostly not of entrepreneurs.** Project Active studied sedentary healthy adults. Lally studied volunteers, many of them students. Nothing I found studied people with 12-hour irregular days.
+
+## Sources
+### 1. Sardeli 2018: RT during caloric restriction
+- **Citation:** Sardeli AV, Komatsu TR, Mori MA, Gáspari AF, Chacon-Mikahil MPT. 2018. Resistance Training Prevents Muscle Loss Induced by Caloric Restriction in Obese Elderly Individuals: A Systematic Review and Meta-Analysis. *Nutrients* 10(4):423. DOI 10.3390/nu10040423; PMID 29596307. https://pubmed.ncbi.nlm.nih.gov/29596307/ (abstract only)
+- **Population:** 6 RCTs, obese elderly, DXA; RT 3×/week for 12–24 weeks; diets mostly 55% carbohydrate / 15% protein / 30% fat. **Mismatch vs subject:** older; lower protein; supervised 3×/week RT; high-carb diets.
+- **Finding / number:** RT prevented 93.5% of the lean mass lost to caloric restriction, a difference of 0.819 kg (0.364–1.273). Fat and total mass losses were similar with or without RT.
+- **Quality / limitations:** Only 6 small trials, all in the elderly and all at 3×/week. Says nothing about lower doses.
+
+### 2. Villareal 2017: aerobic vs RT vs combined while dieting
+- **Citation:** Villareal DT, et al. 2017. Aerobic or Resistance Exercise, or Both, in Dieting Obese Older Adults. *N Engl J Med* 376(20):1943–1955. DOI 10.1056/NEJMoa1616338; PMID 28514618. (abstract only)
+- **Population:** 160 obese adults aged ≥65, frail, supervised, 26 weeks. **Mismatch vs subject:** age, frailty, supervised gym setting.
+- **Finding / number:** Lean mass fell 5% with aerobic exercise (55.0→52.3 kg), 2% with RT (58.1→57.1 kg) and 3% with combined training (56.5→54.8 kg). The Physical Performance Test score rose 21% with combined training vs 14% with either alone.
+- **Quality / limitations:** Strong RCT, but high-dose supervised training (~3×/week) that the subject has already failed to keep up.
+
+### 3. Schoenfeld, Grgic, Krieger 2019: training frequency and hypertrophy
+- **Citation:** Schoenfeld BJ, Grgic J, Krieger J. 2019. How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis. *J Sports Sci* 37(11). DOI 10.1080/02640414.2018.1555906; PMID 30558493. Page numbers UNVERIFIED. (abstract only)
+- **Population:** 25 studies, mostly young healthy adults, trained and untrained. **Mismatch vs subject:** not dieting, not obese or insulin-resistant.
+- **Finding / number:** With weekly volume held equal, higher and lower frequencies did not differ significantly. The authors say people can choose frequency based on preference. The 2016 version (*Sports Med* 46(11):1689–1697, DOI 10.1007/s40279-016-0543-8) found 2×/week beat 1×/week, but most of those studies did not hold volume equal.
+- **Quality / limitations:** Hypertrophy measures, short trials, calorie surplus or maintenance.
+
+### 4. Paluch 2022: daily steps and mortality
+- **Citation:** Paluch AE, et al. 2022. Daily steps and all-cause mortality: a meta-analysis of 15 international cohorts. *Lancet Public Health* 7(3):e219–e228. DOI 10.1016/S2468-2667(21)00302-9; PMC9289978. (abstract only; PMID not confirmed)
+- **Population:** 47,471 adults, 3,013 deaths, median follow-up 7.1 years. **Mismatch vs subject:** general population, observational, outcome is mortality rather than body composition.
+- **Finding / number:** Mortality benefit levels off at about 8,000–10,000 steps/day under 60 and 6,000–8,000 at 60+. The top quartiles had 40–53% lower risk. Stepping speed added little once total steps were accounted for.
+- **Quality / limitations:** Observational, so reverse causation is possible (sick people walk less).
+
+### Supporting / conflicting sources (abstract only unless noted)
+- **Stens 2023**, *JACC*, DOI 10.1016/j.jacc.2023.07.029. 12 studies, n=111,309. Risk falls significantly from 2,517 steps/day. Peak benefit at 8,763 steps (all-cause mortality) and 7,126 (CVD).
+- **Saint-Maurice 2020**, *JAMA* (volume/pages UNVERIFIED). n=4,840, US adults aged ≥40. HR 0.49 for 8,000 vs 4,000 steps/day. Step intensity not significant once total steps were adjusted for.
+- **Beavers 2017**, *Obesity*, DOI 10.1002/oby.21977, PMID 29086504. n=249, mean age 66.9, BMI 34.4, 18 months. Weight loss: WL −5.7 kg, WL+aerobic −8.5 kg, WL+RT −8.7 kg. Fat loss: −4.8, −6.8 and −7.8 kg. Lean loss: −1.0, −1.6 and −0.8 kg.
+- **RT and insulin resistance meta-analysis, 2023**, PMID 37331899 (authors and journal UNVERIFIED). 27 studies of overweight/obese adults without diabetes. HOMA-IR −1.05 (−1.33 to −0.76).
+- **Home vs gym RT in T2D, 2025**, *Diabetol Metab Syndr*, DOI 10.1186/s13098-025-01793-7. 20 trials, n=1,397. Supervised gym RT lowered HbA1c more than home RT. The authors suggest this may be due to adherence, equipment and load-dosing differences. **This conflicts with the "home is enough" argument.**
+- **Buffey 2022**, *Sports Med* 52(8):1765–1787, DOI 10.1007/s40279-022-01649-4, PMID 35147898. 7 acute crossover trials. Standing and light-walking breaks lowered postprandial glucose, with walking the better break. Mean 6-h glucose was 5–12% lower than sitting, and glucose area under the curve was 24% lower with walking. Insulin: no significant effect from standing.
+- **Reynolds 2016**, *Diabetologia*, PMID 27747394 (volume/pages UNVERIFIED). n=41 with T2D, mean age 60. Ten minutes of walking after each meal beat 30 min at any time by 12%, and by 22% after the evening meal.
+- **Donnelly 2009, ACSM position stand**, *MSSE*, DOI 10.1249/MSS.0b013e3181949333. Recommends 150–250 min/week for modest weight loss and >250 min/week to maintain losses. RT "does not enhance weight loss" but may increase fat-free mass.
+- **Pontzer 2016**, *Curr Biol*, PMID 26832439. n=332, aged 25–45. Total energy expenditure rises with activity at low levels and then plateaus, so the calories burned by walking are partly compensated for.
+- **Dunn 1999 (Project Active)**, *JAMA*, PMID 9929085 (volume/pages and effect sizes UNVERIFIED). n=235 sedentary healthy adults. Over 24 months, lifestyle activity was as effective as structured exercise for activity, VO2peak and blood pressure, and was more cost-effective.
+- **Bravata 2007**, *JAMA*, PMID 18029834. Having a step goal was a key predictor of success.
+- **Lally 2010**, *Eur J Soc Psychol* 40(6):998–1009, DOI 10.1002/ejsp.674. n=96, 82 analysed. The "exercise takes ~1.5× longer" figure comes from a BPS Research Digest summary.
+- **Kaushal & Rhodes 2015**, *J Behav Med*, DOI 10.1007/s10865-015-9640-7, PMID 25851609. n=111 new gym members.
+- **Bélanger-Gravel 2013**, *Health Psychol Rev* 7:23–54, DOI 10.1080/17437199.2011.560095. 26 studies.
+- **Dishman ~50% dropout:** quoted second-hand in PMC5289308. Original not retrieved.
+- **Islam, Gibala, Little 2022**, *Exerc Sport Sci Rev* 50(1):31–37. Defines "exercise snacks" as vigorous bouts of ≤1 min. Twenty-second stair climbs, 3 days/week for 6 weeks, improved fitness.
+- **Home resistance "exercise snacking" pilot**, *BMC Geriatr* 2022, PMID 35751032. n=38, mean age 69.8. Nine-minute sessions 1–3×/day for 4 weeks were feasible. Hypertrophy outcomes not established.
+- **Minimal-dose RT reviews:** Iversen 2021 *Sports Med* (PMID 34125411), Fyfe 2022 *Sports Med* 52(3):463–479 (PMID 34822137) and Androulakis-Korakakis 2020 *Sports Med* (PMID 31797219). The last found that a single set of 6–12 reps at ~70–85% 1RM, 2–3×/week, gives "suboptimal, yet significant" strength gains in trained men. Iversen's specific set and time prescriptions are UNVERIFIED.
+- **Not retrieved (UNVERIFIED, not relied on):** Weiss 2017, Miller 2013, Banach 2023, Grgic 2018 effect sizes (citation only: *Sports Med*, DOI 10.1007/s40279-018-0872-x), Jenkins exercise-snack trials.
+
+## Disagreements between sources
+- **Home vs supervised RT.** The T2D meta-analysis found supervised gym RT did better than home RT. The subject's own history is that supervised programmes collapse. A dose done at home beats a better dose he doesn't do, but home RT may underdose load. Progression has to be deliberate.
+- **Aerobic exercise and lean mass.** Villareal and Beavers found aerobic training *increased* lean loss compared with RT (Beavers: −1.6 vs −1.0 kg on diet alone). Donnelly frames aerobic activity as neutral. For lean mass, walking is not protective.
+- **Weight loss.** Donnelly says RT does not boost weight loss. Beavers found WL+RT lost 3 kg more than WL alone over 18 months. The difference may be due to adherence or population.
+- **Frequency.** Schoenfeld 2016 favoured 2×/week, but in studies that did not hold volume equal. Schoenfeld 2019 found no difference when volume was equal. Practically, 1×/week works only if that one session carries enough hard sets.
+- **Energy compensation.** Pontzer predicts that part of walking's calorie burn is offset. Beavers still found extra fat loss with added exercise.
+
+## Applying it to the subject
+**Month-one priority: RT, done so that it builds a habit.** The case: (1) RT is the only proven lever for lean mass during a deficit (Sardeli, Villareal). (2) RT independently lowers HOMA-IR (−1.05 in obese adults without diabetes), and he is at 3.58. (3) On 30–60 g carb/day, the glucose benefit of post-meal walking is small. (4) Steps can be gathered without a scheduled block (Project Active), but RT cannot. So the one fixed slot should go to RT. The case against: walking is easier, and his record with structured sessions is poor (57% attendance, collapse by month 3). The way through: equal-volume frequency doesn't matter for hypertrophy (Schoenfeld 2019), and habits form faster with frequent, cued repetitions (Lally, Kaushal & Rhodes). So weekly RT volume can be split into short daily home "snacks", with no gym travel.
+
+**Minimum viable prescription (weeks 1–12):**
+1. **RT at home:** 4–5 days/week, 8–12 min each, tied to one fixed cue (for example, "after I get home, before I shower"). Rotate squat or split-squat, push-up (incline if needed), row (band or backpack), hip hinge, and plank. Do 2–3 hard sets, ending about 1–3 reps short of failure. Target ~6–10 hard sets per muscle group per week. **Confidence: medium.** Frequency and total volume are well supported. Home and bodyweight loading, and the snack format, are only pilot-tested for hypertrophy. The set target is extrapolated.
+2. **Step target, not walk sessions:** measure 7 days of baseline, then aim for baseline + ~2,000/day, rising towards 7,000–9,000/day. Use phone or wearable tracking with a visible goal. **Confidence: medium-high** for adding steps (Bravata). Low for fat-loss effect beyond the diet (Donnelly, Pontzer).
+3. **Post-meal walk of 10 min** after the largest meal when possible. **Confidence: low** for glucose benefit on his diet. Medium as an easy way to add steps.
+4. **If-then plans** written for 2–3 predictable disruptions (for example, "If service runs past 22:00, I do 1 set of each on the kitchen floor"). **Confidence: medium** (d ≈ 0.24–0.31).
+5. **Missed-day rule:** a missed day does not reset anything (Lally). Judge adherence over 4-week blocks, not daily streaks. **Confidence: medium.**
+
+**Floor for busy weeks:** 2 RT snacks/week of about 10 min, with 2 hard sets each of squat, push-up and row. Keep daily steps at or above baseline (no drop below ~5,000). This keeps the habit cue alive and holds some stimulus. **Confidence: low-medium.** No trial tested this exact floor. It is extrapolated from minimal-dose reviews (Androulakis-Korakakis, Fyfe) and the finding that RT spares lean mass even in short trials.
+
+**Worked estimate:** Suppose diet alone would cost ~1 kg of lean mass over 6 months (Beavers' diet-only arm lost −1.0 kg over 18 months, in older adults). RT at an adequate dose might spare most of that (Sardeli: ~0.8 kg, 93%). With 150–180 g of protein a day, his baseline loss is probably smaller, so the absolute benefit may be only ~0.3–0.8 kg. That gain is still real, and RT also brings insulin-sensitivity and strength benefits. [guessing]
+
+Confidence: **medium**, because the direction (RT for lean mass, steps for sustainable activity) is consistent across RCTs and meta-analyses. However, the lean-mass trials are in adults ~35 years older on lower-protein, higher-carb diets, the minimal home-RT dose has not been tested for hypertrophy during a diet, and every number was checked only against indexed abstracts because full-text access was blocked.
